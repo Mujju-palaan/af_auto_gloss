@@ -97,8 +97,8 @@ const faqs = [
 const Faqpage = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
 
-  const toggleQuestion = index => {
-    setOpenQuestion(openQuestion === index ? null : index);
+  const toggleQuestion = (index : any) => {
+    setOpenQuestion((openQuestion === index) ? null : index);
   };
 
   const flatFaqs = faqs.flat();
