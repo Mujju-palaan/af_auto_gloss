@@ -1,7 +1,7 @@
 import React from 'react'
 import Refundpolicypage from '../aaContainer/refundpolicypage/refundpolicypage'
 
-const refundpolicy = () => {
+const Refundpolicy = () => {
   return (
     <div>
       <Refundpolicypage/>
@@ -9,4 +9,4 @@ const refundpolicy = () => {
   )
 }
 
-export default refundpolicy
+export default Refundpolicy

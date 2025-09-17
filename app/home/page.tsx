@@ -1,7 +1,7 @@
 import React from 'react'
 import HomePage from '../aaContainer/homepage/homepage'
 
-const home = () => {
+const Home = () => {
   return (
     <div>
       <HomePage/>
@@ -9,4 +9,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home

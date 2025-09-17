@@ -1,12 +1,12 @@
 import React from 'react'
 import AboutPage from '../aaContainer/aboutpage/aboutpage'
 
-const about = () => {
+const About = () => {
   return (
     <div>
-    <AboutPage/>
+      <AboutPage/>
     </div>
   )
 }
 
-export default about
+export default About

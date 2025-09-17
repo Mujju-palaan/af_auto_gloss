@@ -1,7 +1,7 @@
 import React from 'react'
 import Termsconditionpage from '../aaContainer/termsconditionpage/termsconditionpage'
 
-const termscondition = () => {
+const Termscondition = () => {
   return (
     <div>
       <Termsconditionpage/>
@@ -9,4 +9,4 @@ const termscondition = () => {
   )
 }
 
-export default termscondition
+export default Termscondition

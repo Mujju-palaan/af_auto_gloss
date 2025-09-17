@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactPage from '../aaContainer/contactpage/contactpage'
 
-const contact = () => {
+const Contact = () => {
   return (
     <div>
       <ContactPage/>
@@ -9,4 +9,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

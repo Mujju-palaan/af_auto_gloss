@@ -1,7 +1,7 @@
 import React from 'react'
 import FaqPage from '../aaContainer/faqpage/faqpage'
 
-const faq = () => {
+const Faq = () => {
   return (
     <div>
       <FaqPage/>
@@ -9,4 +9,4 @@ const faq = () => {
   )
 }
 
-export default faq
+export default Faq

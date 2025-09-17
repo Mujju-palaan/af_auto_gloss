@@ -1,7 +1,7 @@
 import React from 'react'
 import Privacypolicypage from '../aaContainer/privacypolicypage/privacypolicypage'
 
-const privacypolicy = () => {
+const Privacypolicy = () => {
   return (
     <div>
       <Privacypolicypage/>
@@ -9,4 +9,4 @@ const privacypolicy = () => {
   )
 }
 
-export default privacypolicy
+export default Privacypolicy

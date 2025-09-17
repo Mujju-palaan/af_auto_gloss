@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductPage from '../aaContainer/productpage/productpage'
 
-const product = () => {
+const Product = () => {
   return (
     <div>
       <ProductPage/>
@@ -9,4 +9,4 @@ const product = () => {
   )
 }
 
-export default product
+export default Product

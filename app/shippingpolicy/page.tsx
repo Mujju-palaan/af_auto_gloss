@@ -1,7 +1,7 @@
 import React from 'react'
 import Shippingpolicypage from '../aaContainer/shippingpolicypage/shippingpolicypage'
 
-const shippingpolicy = () => {
+const Shippingpolicy = () => {
   return (
     <div>
       <Shippingpolicypage/>
@@ -9,4 +9,4 @@ const shippingpolicy = () => {
   )
 }
 
-export default shippingpolicy
+export default Shippingpolicy
