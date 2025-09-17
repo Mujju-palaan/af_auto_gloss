@@ -1,9 +1,9 @@
 import React from 'react'
 
-const termsconditionpage = () => {
+const Termsconditionpage = () => {
   return (
     <div>terms&conditionpage</div>
   )
 }
 
-export default termsconditionpage
+export default Termsconditionpage

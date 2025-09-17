@@ -1,9 +1,9 @@
 import React from 'react'
 
-const refundpolicypage = () => {
+const Refundpolicypage = () => {
   return (
-    <div>refundpolicypage</div>
+    <div>Refundpolicypage</div>
   )
 }
 
-export default refundpolicypage
+export default Refundpolicypage

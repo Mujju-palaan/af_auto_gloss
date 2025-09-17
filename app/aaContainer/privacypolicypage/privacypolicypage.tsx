@@ -1,9 +1,9 @@
 import React from 'react'
 
-const privacypolicypage = () => {
+const Privacypolicypage = () => {
   return (
-    <div>privacypolicypage</div>
+    <div>Privacypolicypage</div>
   )
 }
 
-export default privacypolicypage
+export default Privacypolicypage

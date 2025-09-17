@@ -1,9 +1,9 @@
 import React from 'react'
 
-const faqpage = () => {
+const FaqPage = () => {
   return (
-    <div>faqpage</div>
+    <div>FaqPage</div>
   )
 }
 
-export default faqpage
+export default FaqPage

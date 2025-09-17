@@ -1,9 +1,9 @@
 import React from 'react'
 
-const shippingpolicypage = () => {
+const Shippingpolicypage = () => {
   return (
-    <div>shippingpolicypage</div>
+    <div>Shippingpolicypage</div>
   )
 }
 
-export default shippingpolicypage
+export default Shippingpolicypage
