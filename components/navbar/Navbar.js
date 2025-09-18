@@ -83,9 +83,10 @@ const Navbar = () => {
     // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Features", path: "javascript:void(0)", isDrapdown: true, navs: dropdownNavs },
-        { title: "Integrations", path: "javascript:void(0)", isDrapdown: false },
-        { title: "Customers", path: "javascript:void(0)", isDrapdown: false },
-        { title: "Pricing", path: "javascript:void(0)", isDrapdown: false }
+        { title: "Contact", path: "/contact", isDrapdown: false },
+        { title: "Support", path: "/support", isDrapdown: false },
+        { title: "Pricing", path: "/pricing", isDrapdown: false },
+        { title: "Faq's", path: "/faq", isDrapdown: false }
     ]
 
     useEffect(() => {
@@ -97,19 +98,19 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`relative z-20 bg-white w-full md:static md:text-sm md:border-none ${state ? "shadow-lg rounded-b-xl md:shadow-none" : ""}`}>
+            <nav className={`relative z-20 bg-darkgrey w-full md:static md:text-sm md:border-none ${state ? "shadow-lg rounded-b-xl md:shadow-none" : ""}`}>
                 <div className="items-center gap-x-14 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="javascript:void(0)">
+                        <a href="/home">
                             <img
-                                src="https://www.floatui.com/logo.svg"
-                                width={120}
-                                height={50}
-                                alt="Float UI logo"
+                                src="/AF_logo.png"
+                                width={80}
+                                height={30}
+                                alt="AF AutoGloss logo"
                             />
                         </a>
                         <div className="md:hidden">
-                            <button className="text-gray-500 hover:text-gray-800"
+                            <button className="text-white-500 hover:text-gray-800"
                                 onClick={() => setState(!state)}
                             >
                                 {
@@ -135,7 +136,7 @@ const Navbar = () => {
                                         <li key={idx}>
                                             {
                                                 item.isDrapdown ? (
-                                                    <button className="w-full flex items-center justify-between gap-1 text-gray-700 hover:text-indigo-600"
+                                                    <button className="w-full flex items-center justify-between gap-1 text-white-700 hover:text-gray-600"
                                                         onClick={() => setDrapdownState({ idx, isActive: !drapdownState.isActive })}
                                                     >
                                                         {item.title}
@@ -153,7 +154,7 @@ const Navbar = () => {
                                                         }
                                                     </button>
                                                 ) : (
-                                                    <a href={item.path} className="block text-gray-700 hover:text-indigo-600">
+                                                    <a href={item.path} className="block text-white-700 hover:text-gray-600">
                                                         {item.title}
                                                     </a>
                                                 )
@@ -192,7 +193,7 @@ const Navbar = () => {
                             }
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
                                 <li>
-                                    <a href="javascript:void(0)" className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none">
+                                    <a href="javascript:void(0)" className="block py-3 text-center text-white-700 hover:text-gray-600 border rounded-lg md:border-none">
                                         Log in
                                     </a>
                                 </li>
