@@ -1,8 +1,11 @@
 import React from 'react'
+import StatsContainer from '@/components/StatsContainer'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <StatsContainer/>
+    </div>
   )
 }
 
