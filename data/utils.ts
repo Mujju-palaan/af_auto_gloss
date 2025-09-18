@@ -92,6 +92,7 @@ export const navigation = {
     { name: "About AF Autogloss", href: "/about" },
     { name: "Work With Us", href: "#" },
     { name: "Company Profile", href: "#" },
+    { name: "Testimonials", href: "/testimonials" },
   ],
   buy: [
     { name: " AF Autogloss Loyalty", href: "#" },
