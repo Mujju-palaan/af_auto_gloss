@@ -85,7 +85,7 @@ const Navbar = () => {
         { title: "Features", path: "javascript:void(0)", isDrapdown: true, navs: dropdownNavs },
         { title: "Contact", path: "/contact", isDrapdown: false },
         { title: "Support", path: "/support", isDrapdown: false },
-        { title: "Pricing", path: "/pricing", isDrapdown: false },
+        { title: "Product", path: "/product", isDrapdown: false },
         { title: "Faq's", path: "/faq", isDrapdown: false }
     ]
 
