@@ -5,8 +5,8 @@ import Productcard2 from '@/components/product/Productcard2'
 const Productpage = () => {
   return (
     <div>
-        <Productcard/>
-        {/* <Productcard2/> */}
+        {/* <Productcard/> */}
+        <Productcard2/>
     </div>
   )
 }

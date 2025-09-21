@@ -12,7 +12,7 @@ const Product_detailcard1 = () => {
             <img 
               src={item.src}
               alt="img" 
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" 
+              className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded" 
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">AF Auto Gloss</h2>
@@ -66,7 +66,7 @@ const Product_detailcard1 = () => {
                   <span className="mr-3">Size</span>
                   <div className="relative">
                     <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
-                      <option>2L</option>
+                      {/* <option>2L</option> */}
                       <option>5L</option>
                       <option>10L</option>
                       <option>20L</option>
