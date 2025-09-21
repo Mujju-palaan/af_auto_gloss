@@ -84,7 +84,8 @@ export const incentives = [
 
 export const navigation = {
   sale: [
-    { name: "Discounts", href: "#" },
+    { name: "Home", href: "/home" },
+    { name: "Product", href: "/product" },
     { name: "News", href: "#" },
     { name: "Register Discounts", href: "#" },
   ],
@@ -95,15 +96,15 @@ export const navigation = {
     { name: "Testimonials", href: "/testimonials" },
   ],
   buy: [
-    { name: " AF Autogloss Loyalty", href: "#" },
-    { name: "Terms Of Use", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Complaints", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "Terms Of Use", href: "/termscondition" },
+    { name: "Privacy Policy", href: "/privacypolicy" },
+    { name: "Refund Policy", href: "/refundpolicy" },
+    { name: "Shipping Policy", href: "/shippingpolicy" },
   ],
   help: [
     { name: "Contact", href: "/contact" },
     { name: "How to Buy at AF Autogloss", href: "#" },
+    { name: "Support", href: "/support" },
     { name: "FAQ", href: "/faq" },
   ],
 };

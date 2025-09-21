@@ -83,9 +83,9 @@ const Navbar = () => {
     // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Features", path: "javascript:void(0)", isDrapdown: true, navs: dropdownNavs },
+        { title: "Product", path: "/product", isDrapdown: false },
         { title: "Contact", path: "/contact", isDrapdown: false },
         { title: "Support", path: "/support", isDrapdown: false },
-        { title: "Product", path: "/product", isDrapdown: false },
         { title: "Faq's", path: "/faq", isDrapdown: false }
     ]
 
