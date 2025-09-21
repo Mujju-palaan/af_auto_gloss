@@ -1,5 +1,5 @@
 import React from 'react'
-import { TermsconditionData } from '@/data/termsconditionData'
+import { TermsconditionData } from '@/data/policiesData'
 
 const Termsconditionpage = () => {
   return (

@@ -1,4 +1,4 @@
-import { ShippingpolicyData } from '@/data/shippingpolicyData'
+import { ShippingpolicyData } from '@/data/policiesData'
 import React from 'react'
 
 const Shippingpolicypage = () => {

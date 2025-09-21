@@ -1,5 +1,5 @@
 import React from 'react'
-import { RefundpolicyData } from '@/data/RefundpolicyData'
+import { RefundpolicyData } from '@/data/policiesData'
 
 const Refundpolicypage = () => {
   return (
