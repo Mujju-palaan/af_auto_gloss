@@ -12,7 +12,7 @@ const Productcard2 = () => {
                 Product1.map((item, idx) => ( 
 
                 <div key={idx} className="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a className="block relative h-auto rounded ">
+                    <a href={item.href} className="block relative h-auto rounded ">
                     <img 
                         alt="ecommerce" 
                         className="object-cover object-center w-full h-full block" 
