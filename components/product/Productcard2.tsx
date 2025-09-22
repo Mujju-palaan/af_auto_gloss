@@ -1,5 +1,5 @@
 import React from 'react'
-import { Product1 } from '@/data/product1'
+import { ProductData } from '@/data/ProductData'
 
 const Productcard2 = () => {
   return (
@@ -9,7 +9,7 @@ const Productcard2 = () => {
                 <div className="flex flex-wrap -m-4">
 
                 {
-                Product1.map((item, idx) => ( 
+                ProductData.map((item, idx) => ( 
 
                 <div key={idx} className="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a href={item.href} className="block relative h-auto rounded ">
