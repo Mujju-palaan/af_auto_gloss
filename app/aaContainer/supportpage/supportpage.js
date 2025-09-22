@@ -7,7 +7,7 @@ const Supportpage = () => {
 
     const team = [
         {
-            avatar: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+            avatar: "/profile_afrid.jpeg",
             name: "Mohammad Afrid",
             title: "Chief Executive Officer (CEO)",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -31,8 +31,8 @@ const Supportpage = () => {
             twitter: "javascript:void(0)",
         },
         {
-            avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-            name: "Mujju",
+            avatar: "profile_mujju.jpeg",
+            name: "Mohammed Mujahid",
             title: "Head of designers",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
             linkedin: "javascript:void(0)",
@@ -40,20 +40,20 @@ const Supportpage = () => {
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-            name: "Bablu",
+            name: "Muddassir Sheikh",
             title: "Product designer",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
         },
-        {
-            avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-            name: "Irfan",
-            title: "Product manager",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-        },
+        // {
+        //     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+        //     name: "Irfan",
+        //     title: "Product manager",
+        //     desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        // },
     ]
 
     return (
@@ -64,7 +64,7 @@ const Supportpage = () => {
                         Meet our team
                     </h3>
                     <p className="text-gray-600 mt-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy.
+                        At AF Auto Gloss, we believe that our people are our greatest asset. Our team combines expertise, creativity, and dedication to deliver exceptional results for our clients and partners. Each member brings a unique skill set, helping us innovate and excel in every project we undertake.                    
                     </p>
                 </div>
                 <div className="mt-12">

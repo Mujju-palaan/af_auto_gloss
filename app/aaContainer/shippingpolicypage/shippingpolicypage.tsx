@@ -4,41 +4,40 @@ import React from 'react'
 const Shippingpolicypage = () => {
   return (
     <div>
-      <div>
-        <section className="bg-white 500 text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-col text-center w-full mb-20">
-              <h2 className="text-xs text-red-500 tracking-widest font-medium title-font mb-1">
-                AF AUTO GLOSS
-              </h2>
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                Shipping Policy
-              </h1>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base pb-4">
-                At AF Auto Gloss, we are committed to delivering your car care products, including Dashboard Polish, Tyre Polish, Glass Cleaner, Foam, and Microfiber Car Cloth, in a safe, timely, and reliable manner. Please review our shipping policy below for details on processing, delivery, and related procedures.              
-              </p>
+      <div className="bg-gray-50 py-16 px-4">
+        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+          <h1 className="text-3xl font-semibold text-gray-900 mb-6">Shipping Policy</h1>
+          <p className="text-gray-700 mb-6">Last Updated: 23rd Sep, 2025</p>
+          <p className="text-gray-700 mb-6">
+            Thank you for choosing AF Auto Gloss! We are dedicated to providing you with a seamless shopping experience, and part of that commitment involves transparent and reliable shipping practices.
+          </p>
 
-              {ShippingpolicyData.map((item, idx) => (
-                <div key={idx} className='text-left pb-4'>
-                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                    {item.title}
-                  </h1>
-                  <ul>
-                    <li>{item.l1}</li>
-                    <li>{item.l2}</li>
-                    <li>{item.l3}</li>
-                    <li>{item.l4}</li>
-                    <li>{item.l5}</li>
+          {ShippingpolicyData.map((item, idx) => {
+            // Collect non-empty list items dynamically
+            const listItems = [item.l1, item.l2, item.l3, item.l4, item.l5].filter(Boolean);
+
+            return (
+              <div key={idx}>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">{item.title}</h2>
+                {listItems.length > 0 && (
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+                    {listItems.map((li, i) => (
+                      <li key={i} className="leading-relaxed">
+                        {li}
+                      </li>
+                    ))}
                   </ul>
-                </div>
-              ))}
+                )}
 
-            </div>
+              </div>
+            );
+          })}
 
-
-
-          </div>
-        </section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">About AF Auto Gloss</h2>
+          <p className="text-gray-700 mb-6">
+            AF Auto Gloss, an automotive care brand that offers a complete range of cleaning, maintenance, and surface protection solutions for passionate car and bike enthusiasts. Established in 2025, the brand provides high-quality, economical, and easy-to-use auto detailing products for four-wheelers, two-wheelers, and cycles. All products are manufactured in-house and thoroughly tested at our state-of-the-art facility, ensuring best-in-class performance.
+          </p>
+        </div>
       </div>
     </div>
   )
