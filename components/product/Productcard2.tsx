@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 import { ProductData } from '@/data/ProductData'
 
 const Productcard2 = () => {
@@ -9,16 +10,17 @@ const Productcard2 = () => {
                 <div className="flex flex-wrap -m-4">
 
                 {
-                ProductData.map((item, idx) => ( 
+                ProductData.map((item) => ( 
 
-                <div key={idx} className="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a href={item.href} className="block relative h-auto rounded ">
+                <div key={item.id} className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <Link href={`/product/${item.id}`} 
+                        className="block relative h-auto rounded ">
                     <img 
                         alt="ecommerce" 
                         className="object-cover object-center w-full h-full block" 
                         src={item.src}
                     />
-                    </a>
+                    </Link>
                     <div className="mt-4">
                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
                     <h2 className="text-gray-900 title-font text-lg font-medium">{item.title}</h2>
