@@ -3,10 +3,14 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } } // ✅ wrap in context
 ) {
   try {
-    const productId = Number(params.id);
+    const productId = Number(context.params.id);
+
+    if (isNaN(productId)) {
+      return NextResponse.json({ error: "Invalid product ID" }, { status: 400 });
+    }
 
     const [rows]: any = await db.query(
       "SELECT * FROM products WHERE product_id = ?",
@@ -14,10 +18,9 @@ export async function GET(
     );
 
     if (!rows || rows.length === 0) {
-      return NextResponse.json({ message: "Product not found" }, { status: 404 });
+      return NextResponse.json({ error: "Product not found" }, { status: 404 });
     }
 
-    // Convert MySQL BLOB -> Base64 if image exists
     if (rows[0].image) {
       rows[0].image = `data:image/jpeg;base64,${Buffer.from(
         rows[0].image

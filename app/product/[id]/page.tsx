@@ -1,21 +1,28 @@
-// app/product/[id]/page.tsx (Next 13+ server component)
+// app/product/[id]/page.tsx
+import ProductDetailCard from '@/components/productdetail/Product_detailcard1';
 import { db } from '@/config/db';
-import Product_detailcard1 from '../../../components/productdetail/Product_detailcard1';
 
-interface ProductPageProps {
-  params: { id: string };
+interface PageProps {
+  params: Promise<{ id: string }>;
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
-  const productId = Number(params.id);
+export default async function ProductPage({ params }: PageProps) {
+  const { id } = await params; // ✅ await params
+  const productId = Number(id);
 
-  // Fetch DB data **at request time**, not build time
   const [rows]: any = await db.query(
     'SELECT * FROM products WHERE product_id = ?',
     [productId]
   );
 
-  if (!rows || rows.length === 0) return <div>Product not found</div>;
+  if (!rows || rows.length === 0) {
+    return <div>Product not found</div>;
+  }
 
-  return <Product_detailcard1 product={rows[0]} />;
+  // Convert BLOB to Base64
+  if (rows[0].image) {
+    rows[0].image = `data:image/jpeg;base64,${Buffer.from(rows[0].image).toString('base64')}`;
+  }
+
+  return <ProductDetailCard product={rows[0]} />;
 }
