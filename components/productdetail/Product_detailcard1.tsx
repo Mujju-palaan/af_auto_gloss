@@ -1,9 +1,11 @@
 import React from "react";
+import Image from 'next/image';
+
 
 interface ProductDetailCardProps {
   product: {
     id: number;
-    src: string;
+    image: string;
     title: string;
     reviews?: string;
     product_description: string;
@@ -17,9 +19,11 @@ const Product_detailcard1: React.FC<ProductDetailCardProps> = ({ product }) => {
     <section className="bg-white 500 text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <img
-            src={product.src}
+          <Image
+            src={product.image || '/default-product.jpg'}
             alt={product.title}
+            width={600}
+            height={600}
             className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded"
           />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -44,7 +48,7 @@ const Product_detailcard1: React.FC<ProductDetailCardProps> = ({ product }) => {
               </div>
             </div>
             <div className="flex">
-              <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>
+              <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
               <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Buy</button>
             </div>
           </div>

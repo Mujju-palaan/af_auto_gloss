@@ -1,17 +1,27 @@
-import Product_detailcard1 from "../../../components/productdetail/Product_detailcard1";
-import { ProductData } from "@/data/ProductData";
+import { db } from '@/config/db';
+import ProductDetailCard from '@/components/productdetail/Product_detailcard1';
 
 interface ProductPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const productId = Number(params.id);
-  const product = ProductData.find((p) => p.id === productId);
+  const { id } = await params; // <-- await before using
+  const productId = Number(id);
 
-  if (!product) {
-    return <div className="p-8 text-center text-2xl font-bold">Product Not Found</div>;
+  const [rows]: any = await db.query(
+    'SELECT * FROM products WHERE product_id = ?',
+    [productId]
+  );
+
+  if (!rows || rows.length === 0) {
+    return <div>Product not found</div>;
   }
 
-  return <Product_detailcard1 product={product} />;
+  // Convert BLOB to Base64 if needed
+  if (rows[0].image) {
+    rows[0].image = `data:image/jpeg;base64,${Buffer.from(rows[0].image).toString('base64')}`;
+  }
+
+  return <ProductDetailCard product={rows[0]} />;
 }

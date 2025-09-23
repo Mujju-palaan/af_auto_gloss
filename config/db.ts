@@ -4,7 +4,7 @@ export const db = mysql.createPool({
     host:"localhost",
     user:'root',
     password:'password',
-    database:'hospital',
+    database:'af_autogloss',
     waitForConnections: true,
     connectionLimit: 10,   // optional: pool size
     queueLimit: 0,
