@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import { query } from "@/lib/mysql";
 
 interface Product {
@@ -7,11 +6,13 @@ interface Product {
   price: string;
 }
 
-interface ProductsPageProps {
-  products: Product[];
-}
+export default async function ProductsPage() {
+  // ✅ Runs on the server at build-time (SSG) or request-time (SSR),
+  // depending on how you configure `revalidate`.
+  const products = await query<Product[]>(
+    "SELECT id, title, price FROM products LIMIT 10"
+  );
 
-export default function ProductsPage({ products }: ProductsPageProps) {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Products</h1>
@@ -26,15 +27,6 @@ export default function ProductsPage({ products }: ProductsPageProps) {
   );
 }
 
-// Runs only once, at build time
-export const getStaticProps: GetStaticProps = async () => {
-  const products = await query<Product[]>(
-    "SELECT id, title, price FROM products LIMIT 10"
-  );
-
-  return {
-    props: {
-      products,
-    },
-  };
-};
+// ✅ Enable ISR (Incremental Static Regeneration)
+// Page is statically generated and revalidated every 60s.
+export const revalidate = 60;
