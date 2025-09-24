@@ -3,7 +3,7 @@ use af_autogloss;
 -- drop table products;
 -- select * from products;
 create table products(
-	product_id int auto_increment primary key
+	id int auto_increment primary key
     ,title varchar(255) unique not null
     ,image longblob
     ,review int
