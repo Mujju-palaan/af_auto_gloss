@@ -1,11 +1,12 @@
-export const dynamic = "force-dynamic";  // ensure dynamic behavior
-export const revalidate = 60;            // ISR every 60s
 import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";  
+export const revalidate = 60;
+
 export async function GET(
   _: Request,
-  context: { params: Promise<{ id: string }> } // <- note Promise
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const { id } = await context.params;
@@ -15,7 +16,6 @@ export async function GET(
       return NextResponse.json({ error: "Invalid product ID" }, { status: 400 });
     }
 
-    // query() returns rows directly
     const rows: any[] = await query(
       "SELECT * FROM products WHERE product_id = ?",
       [productId]
@@ -26,7 +26,6 @@ export async function GET(
     }
 
     const product = rows[0];
-
     if (product.image) {
       product.image = `data:image/jpeg;base64,${Buffer.from(product.image).toString("base64")}`;
     }

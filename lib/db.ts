@@ -1,4 +1,3 @@
-// lib/db.ts
 import mysql from "serverless-mysql";
 
 const db = mysql({
@@ -19,11 +18,11 @@ export async function query<T = any>(q: string, values?: (string | number)[]): P
     console.error("❌ DB Query Error:", e);
     throw new Error(e.message);
   } finally {
-    await db.end(); // close after each query (safe for serverless)
+    await db.end(); // safe for serverless
   }
 }
 
-// ✅ Test connection without closing pool
+// Optional: test DB connection at startup
 (async () => {
   try {
     await db.query("SELECT 1");

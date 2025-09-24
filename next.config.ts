@@ -1,8 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'standalone', // default build for server environment
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true, // enable app router
+  },
+  // DO NOT use `output: "export"` for dynamic APIs
+  output: undefined, // or just remove if previously set
 };
 
-export default nextConfig;
+module.exports = nextConfig;
