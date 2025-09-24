@@ -1,10 +1,10 @@
 import React from 'react'
-import Testimonialspage from '../aaContainer/testimonialspage/testimonialspage'
+import Testimonial from '@/components/testimonial/testimonial'
 
 const Testimonials = () => {
   return (
     <div className='bg-white 500'>
-        <Testimonialspage/>
+        <Testimonial/>
     </div>
   )
 }
