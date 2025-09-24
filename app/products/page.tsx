@@ -1,13 +1,15 @@
 import { query } from "@/lib/mysql";
 
+export const dynamic = "force-dynamic"; 
+// ensures it runs on server at request time, not build time
+export const revalidate = 60; // rebuild every 60s
+
+
 interface Product {
   id: number;
   title: string;
   price: string;
 }
-
-export const revalidate = 60; 
-// ISR: page rebuilds every 60s (serverless-friendly)
 
 export default async function ProductsPage() {
   const products = await query<Product[]>(
