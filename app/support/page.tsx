@@ -1,5 +1,5 @@
 import React from 'react'
-import Supportpage from '../aaContainer/supportpage/supportpage'
+import Supportpage from '../aaContainer/service/supportpage/supportpage'
 
 const Support = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import Shippingpolicypage from '../aaContainer/shippingpolicypage/shippingpolicypage'
+import Shippingpolicypage from '@/app/aaContainer/service/policy/shippingpolicypage'
 
 const Shippingpolicy = () => {
   return (

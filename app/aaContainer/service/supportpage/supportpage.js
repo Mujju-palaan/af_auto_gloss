@@ -7,7 +7,7 @@ const Supportpage = () => {
 
     const team = [
         {
-            avatar: "/profile_afrid.jpeg",
+            avatar: "/profile/profile_afrid.jpeg",
             name: "Mohammad Afrid",
             title: "Chief Executive Officer (CEO)",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -31,7 +31,7 @@ const Supportpage = () => {
             twitter: "javascript:void(0)",
         },
         {
-            avatar: "profile_mujju.jpeg",
+            avatar: "profile/profile_mujju.jpeg",
             name: "Mohammed Mujahid",
             title: "Head of designers",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",

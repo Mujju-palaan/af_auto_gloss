@@ -1,6 +1,6 @@
  'use client'
 import { Fragment, useState, useEffect } from "react";
-import { navigation } from '../data/utils'
+import { navigation } from '../../data/utils'
 import Image from "next/image";
 import React from "react";
 
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="mx-auto max-w-screen-2xl px-6 lg:px-8 pt-24 pb-14">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <Image
-              src="/AF_logo.png"
+              src="/company/AF_logo.png"
               alt="AF autogloss logo"
               width={250}
               height={250}

@@ -1,18 +1,9 @@
-import { query } from "@/lib/mysql";
+import React from 'react'
 
-interface Product { id: number; title: string; price: string; }
-
-export const dynamic = "force-static";
-
-export default async function ProductsPage() {
-  const products = await query<Product[]>("SELECT id, title, price FROM products LIMIT 10");
-
+const page = () => {
   return (
-    <div>
-      <h1>Products</h1>
-      <ul>
-        {products.map(p => <li key={p.id}>{p.title} — ${p.price}</li>)}
-      </ul>
-    </div>
-  );
+    <div>page</div>
+  )
 }
+
+export default page

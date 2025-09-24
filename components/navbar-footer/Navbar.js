@@ -103,7 +103,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="/home">
                             <img
-                                src="/AF_logo.png"
+                                src="/company/AF_logo.png"
                                 width={80}
                                 height={30}
                                 alt="AF AutoGloss logo"

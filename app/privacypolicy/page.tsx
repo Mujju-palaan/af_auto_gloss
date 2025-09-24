@@ -1,5 +1,5 @@
 import React from 'react'
-import Privacypolicypage from '../aaContainer/privacypolicypage/privacypolicypage'
+import Privacypolicypage from '@/app/aaContainer/service/policy/privacypolicypage'
 
 const Privacypolicy = () => {
   return (

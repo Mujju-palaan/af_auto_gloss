@@ -1,5 +1,5 @@
 import React from 'react'
-import FaqsPage from '../aaContainer/faqpage/faqpage'
+import FaqsPage from '@/app/aaContainer/service/faqpage/faqpage'
 
 const Faq = () => {
   return (

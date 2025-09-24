@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 import { Container } from './Container'
-import backgroundImage from '@/public/background-faqs.jpg'
+import backgroundImage from '@/public/bg/background-faqs.jpg'
 import Link from 'next/link';
 import {useState} from 'react';
 import {ChevronUpIcon, ChevronDownIcon} from 'lucide-react';

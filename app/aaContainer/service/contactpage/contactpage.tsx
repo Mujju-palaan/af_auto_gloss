@@ -1,6 +1,6 @@
 import React from 'react'
-import Contactform from './contactform'
-import Letsconnect from './letsconnect'
+import Contactform from '../../../../components/contact/contactform'
+import Letsconnect from '../../../../components/contact/letsconnect'
 
 const ContactPage = () => {
   return (

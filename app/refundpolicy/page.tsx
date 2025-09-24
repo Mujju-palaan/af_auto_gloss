@@ -1,5 +1,5 @@
 import React from 'react'
-import Refundpolicypage from '../aaContainer/refundpolicypage/refundpolicypage'
+import Refundpolicypage from '@/app/aaContainer/service/policy/refundpolicypage'
 
 const Refundpolicy = () => {
   return (
