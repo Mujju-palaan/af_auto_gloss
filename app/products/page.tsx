@@ -7,8 +7,6 @@ interface Product {
 }
 
 export default async function ProductsPage() {
-  // ✅ Runs on the server at build-time (SSG) or request-time (SSR),
-  // depending on how you configure `revalidate`.
   const products = await query<Product[]>(
     "SELECT id, title, price FROM products LIMIT 10"
   );
@@ -27,6 +25,5 @@ export default async function ProductsPage() {
   );
 }
 
-// ✅ Enable ISR (Incremental Static Regeneration)
-// Page is statically generated and revalidated every 60s.
-export const revalidate = 60;
+// ✅ Force static generation
+export const dynamic = "force-static";
