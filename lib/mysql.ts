@@ -12,11 +12,11 @@ export const db = mysql({
 export async function query<T = any>(q: string, values: any[] = []): Promise<T> {
   try {
     const results = await db.query<T>(q, values);
-    console.log("✅ Database connected and query executed successfully");
-    await db.end(); // close connection after each query (important in serverless)
+    console.log("✅ Database connected and query executed at build time");
+    await db.end(); // important for serverless
     return results;
   } catch (err) {
-    console.error("❌ Database connection/query failed:", err);
+    console.error("❌ Database query failed:", err);
     throw err;
   }
 }

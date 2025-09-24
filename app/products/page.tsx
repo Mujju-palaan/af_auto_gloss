@@ -1,9 +1,5 @@
+import { GetStaticProps } from "next";
 import { query } from "@/lib/mysql";
-
-export const dynamic = "force-dynamic"; 
-// ensures it runs on server at request time, not build time
-export const revalidate = 60; // rebuild every 60s
-
 
 interface Product {
   id: number;
@@ -11,21 +7,34 @@ interface Product {
   price: string;
 }
 
-export default async function ProductsPage() {
-  const products = await query<Product[]>(
-    "SELECT id, title, price FROM products LIMIT 10"
-  );
+interface ProductsPageProps {
+  products: Product[];
+}
 
+export default function ProductsPage({ products }: ProductsPageProps) {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Products</h1>
-      <ul className="space-y-2">
+    <div style={{ padding: "20px" }}>
+      <h1>Products</h1>
+      <ul>
         {products.map((p) => (
-          <li key={p.id} className="p-3 border rounded-lg shadow-sm">
-            <span className="font-semibold">{p.title}</span> — ${p.price}
+          <li key={p.id}>
+            {p.title} — ${p.price}
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
+// Runs only once, at build time
+export const getStaticProps: GetStaticProps = async () => {
+  const products = await query<Product[]>(
+    "SELECT id, title, price FROM products LIMIT 10"
+  );
+
+  return {
+    props: {
+      products,
+    },
+  };
+};
