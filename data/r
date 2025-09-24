@@ -1,4 +1,5 @@
-import { query } from "@/lib/db";
+// app/api/products/[id]/route.ts
+import { db } from "@/config/db";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -6,15 +7,14 @@ export async function GET(
   context: { params: Promise<{ id: string }> } // <- note Promise
 ) {
   try {
-    const { id } = await context.params;
+    const { id } = await context.params; // <-- await before using
     const productId = Number(id);
 
     if (isNaN(productId)) {
       return NextResponse.json({ error: "Invalid product ID" }, { status: 400 });
     }
 
-    // query() returns rows directly
-    const rows: any[] = await query(
+    const [rows]: any = await db.query(
       "SELECT * FROM products WHERE product_id = ?",
       [productId]
     );
@@ -23,15 +23,13 @@ export async function GET(
       return NextResponse.json({ message: "Product not found" }, { status: 404 });
     }
 
-    const product = rows[0];
-
-    if (product.image) {
-      product.image = `data:image/jpeg;base64,${Buffer.from(product.image).toString("base64")}`;
+    if (rows[0].image) {
+      rows[0].image = `data:image/jpeg;base64,${Buffer.from(rows[0].image).toString("base64")}`;
     }
 
-    return NextResponse.json(product);
+    return NextResponse.json(rows[0]);
   } catch (error) {
-    console.error("❌ Error fetching product:", error);
+    console.error("Error fetching product:", error);
     return NextResponse.json({ error: "Failed to fetch product" }, { status: 500 });
   }
 }
