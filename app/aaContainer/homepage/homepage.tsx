@@ -2,10 +2,12 @@ import React from 'react'
 import StatsContainer from '@/components/home/StatsContainer'
 import Newsletter from '@/components/home/Newsletter'
 import Content from '../../../components/home/content'
+import Hero from './Hero'
 
 const HomePage = () => {
   return (
     <div className='bg-white 500'>
+      <Hero/>
       <Content/>
       <StatsContainer/>
       
