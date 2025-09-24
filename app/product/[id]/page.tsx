@@ -1,26 +1,36 @@
-// app/product/[id]/page.tsx
-import ProductDetailCard from '@/components/productdetail/Product_detailcard1';
+import ProductDetailCard from "@/components/productdetail/Product_detailcard1";
 
 interface PageProps {
-  params: Promise<{ id: string }>; // <-- params is a Promise now
+  params: Promise<{ id: string }>; // params is a Promise
 }
 
-export const dynamic = "force-dynamic"; // ensures fetch happens at runtime
+export const dynamic = "force-dynamic"; // ensures runtime fetch
 
 export default async function ProductPage({ params }: PageProps) {
-  const { id } = await params; // <-- await before using
-  const productId = Number(id);
+  try {
+    const { id } = await params;
+    const productId = Number(id);
 
-  // Fetch product from API
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${productId}`, {
-    cache: 'no-store', // ensures fresh data
-  });
+    if (isNaN(productId)) {
+      return <div>Invalid product ID</div>;
+    }
 
-  const product = await res.json();
+    // Use absolute URL from environment
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-  if (!product || product?.message === 'Product not found') {
-    return <div>Product not found</div>;
+    const res = await fetch(`${baseUrl}/api/products/${productId}`, {
+      cache: "no-store", // ensures fresh data
+    });
+
+    const product = await res.json();
+
+    if (!product || product?.message === "Product not found") {
+      return <div>Product not found</div>;
+    }
+
+    return <ProductDetailCard product={product} />;
+  } catch (error) {
+    console.error("❌ Error fetching product:", error);
+    return <div>Failed to load product</div>;
   }
-
-  return <ProductDetailCard product={product} />;
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import Image from 'next/image';
-
+import Image from "next/image";
 
 interface ProductDetailCardProps {
   product: {
-    id: number;
-    image: string;
+    product_id: number;
+    image: string; // base64 or URL
     title: string;
     reviews?: string;
     product_description: string;
@@ -15,21 +14,33 @@ interface ProductDetailCardProps {
 }
 
 const Product_detailcard1: React.FC<ProductDetailCardProps> = ({ product }) => {
+  const isBase64 = product.image?.startsWith("data:");
+
   return (
-    <section className="bg-white 500 text-gray-600 body-font overflow-hidden">
+    <section className="bg-white text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <Image
-            src={product.image || '/default-product.jpg'}
-            alt={product.title}
-            width={600}
-            height={600}
-            className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded"
-          />
+          {isBase64 ? (
+            <img
+              src={product.image || "/default-product.jpg"}
+              alt={product.title}
+              className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded"
+            />
+          ) : (
+            <Image
+              src={product.image || "/default-product.jpg"}
+              alt={product.title}
+              width={600}
+              height={600}
+              className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded"
+            />
+          )}
+
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">AF Auto Gloss</h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.title}</h1>
             <p className="leading-relaxed">{product.product_description}</p>
+
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex ml-6 items-center">
                 <span className="mr-3">Size</span>
@@ -47,6 +58,7 @@ const Product_detailcard1: React.FC<ProductDetailCardProps> = ({ product }) => {
                 </div>
               </div>
             </div>
+
             <div className="flex">
               <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
               <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Buy</button>
