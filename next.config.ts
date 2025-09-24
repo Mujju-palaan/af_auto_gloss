@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true, // enable app router
   },
   // DO NOT use `output: "export"` for dynamic APIs
-  output: undefined, // or just remove if previously set
+  // output: undefined, // or just remove if previously set
 };
 
 module.exports = nextConfig;

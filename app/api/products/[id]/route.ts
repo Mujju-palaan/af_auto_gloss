@@ -1,8 +1,8 @@
 import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";  
-export const revalidate = 60;
+// export const dynamic = "force-dynamic";  
+// export const revalidate = 60;
 
 export async function GET(
   _: Request,
