@@ -7,8 +7,9 @@ import Hero from './Hero'
 const HomePage = () => {
   return (
     <div className='bg-white 500'>
-      <Hero/>
       <Content/>
+      <Hero/>
+      
       <StatsContainer/>
       
       <Newsletter />

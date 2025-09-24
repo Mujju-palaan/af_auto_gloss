@@ -1,8 +1,11 @@
 import React from 'react'
+import Roadmappage from '../roadmappage/Roadmappage'
 
 const AboutPage = () => {
   return (
-    <div>aboutpage</div>
+    <div>
+      <Roadmappage/>
+    </div>
   )
 }
 
