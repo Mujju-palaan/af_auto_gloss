@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";  // ensure dynamic behavior
+export const revalidate = 60;            // ISR every 60s
 import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
 
