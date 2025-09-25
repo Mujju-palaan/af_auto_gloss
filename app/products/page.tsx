@@ -1,8 +1,14 @@
 import React from 'react'
+import Productdetail from '@/components/cards/productdetail'
+import Productcardpage from '../aaContainer/product/Productcardpage'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <Productcardpage/>
+      {/* <Productdetail/> */}
+      
+    </div>
   )
 }
 
