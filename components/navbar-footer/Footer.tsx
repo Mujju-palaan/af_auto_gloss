@@ -39,7 +39,7 @@ const Footer = () => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          className="text-sm leading-6 text-white hover:text-gray-700"
+                          className="text-sm leading-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
                         >
                           {item.name}
                         </a>
@@ -56,7 +56,7 @@ const Footer = () => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          className="text-sm leading-6 text-white hover:text-gray-700"
+                          className="text-sm leading-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
                         >
                           {item.name}
                         </a>
@@ -75,7 +75,7 @@ const Footer = () => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          className="text-sm leading-6 text-white hover:text-gray-700"
+                          className="text-sm leading-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
                         >
                           {item.name}
                         </a>
@@ -92,7 +92,7 @@ const Footer = () => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          className="text-sm leading-6 text-white hover:text-gray-700"
+                          className="text-sm leading-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
                         >
                           {item.name}
                         </a>
