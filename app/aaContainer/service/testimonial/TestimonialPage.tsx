@@ -45,7 +45,7 @@ const TestimonialPage: React.FC = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
