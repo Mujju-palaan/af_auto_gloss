@@ -4,12 +4,12 @@ export const navigation = {
   sale: [
     { name: "Home", href: "/home" },
     { name: "Product", href: "/product" },
-    { name: "News", href: "#" },
-    { name: "Register Discounts", href: "#" },
+    { name: "News", href: "/comingsoon" },
+    { name: "Register Discounts", href: "/comingsoon" },
   ],
   about: [
     { name: "About AF Autogloss", href: "/about" },
-    { name: "Work With Us", href: "#" },
+    { name: "Work With Us", href: "/comingsoon" },
     { name: "Blogs", href: "/blog" },
     { name: "Testimonials", href: "/testimonials" },
   ],
@@ -21,7 +21,7 @@ export const navigation = {
   ],
   help: [
     { name: "Contact", href: "/contact" },
-    { name: "How to Buy at AF Autogloss", href: "#" },
+    { name: "How to Buy at AF Autogloss", href: "/comingsoon" },
     { name: "Support", href: "/support" },
     { name: "FAQ", href: "/faq" },
   ],
