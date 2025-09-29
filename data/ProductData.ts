@@ -36,14 +36,14 @@ export const ProductData = [
     price:'500.00'
     // ,href:'/product_details/4'
   },
-  {
-    id: 5,
-    image: "/product/Product_GlassCleaner.jpg",
-    title: "Microfiber Car Cloth",
-    reviews:'4',
-    product_description:'“Our high-quality Microfiber Car Cloth is expertly crafted to deliver exceptional performance in cleaning, drying, and detailing. Engineered with ultra-fine, lint-free fibers, it gently lifts and traps dust, dirt, and residues without causing scratches or swirl marks on delicate surfaces such as paint, glass, chrome, and interiors. Its superior absorbency allows for rapid water uptake, ensuring fast drying and a streak-free finish with minimal effort. Durable, reusable, and easy to maintain, this professional-grade cloth is ideal for washing, polishing, buffing, and finishing, making it an essential tool for achieving a flawless, showroom-quality appearance every time.”',
-    price:'(price vary)'
-    // ,href:'/product_details/'
-  },
+  // {
+  //   id: 5,
+  //   image: "/product/Product_GlassCleaner.jpg",
+  //   title: "Microfiber Car Cloth",
+  //   reviews:'4',
+  //   product_description:'“Our high-quality Microfiber Car Cloth is expertly crafted to deliver exceptional performance in cleaning, drying, and detailing. Engineered with ultra-fine, lint-free fibers, it gently lifts and traps dust, dirt, and residues without causing scratches or swirl marks on delicate surfaces such as paint, glass, chrome, and interiors. Its superior absorbency allows for rapid water uptake, ensuring fast drying and a streak-free finish with minimal effort. Durable, reusable, and easy to maintain, this professional-grade cloth is ideal for washing, polishing, buffing, and finishing, making it an essential tool for achieving a flawless, showroom-quality appearance every time.”',
+  //   price:'(price vary)'
+  //   // ,href:'/product_details/'
+  // },
   
 ];

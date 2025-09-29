@@ -17,13 +17,16 @@ const Productall: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <>
+    
+
+      {!selectedProduct ? (
+      // ✅ Show Product Grid
+      <section className="py-12 px-4 sm:px-6 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
         Our Products
       </h2>
 
-      {!selectedProduct ? (
-        // ✅ Show Product Grid
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {ProductData.map((product, index) => (
             <div
@@ -39,8 +42,14 @@ const Productall: React.FC = () => {
             </div>
           ))}
         </div>
+      </section>
+
       ) : (
         // ✅ Show Product Detail for selected product
+      <section className="py-8 px-4 sm:px-6 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+        Product details
+      </h2>
         <div>
           <button
             onClick={() => setSelectedProduct(null)} // 👈 go back to grid
@@ -57,8 +66,9 @@ const Productall: React.FC = () => {
             product_description={selectedProduct.product_description}
           />
         </div>
+      </section>
       )}
-    </section>
+    </>
   );
 };
 
