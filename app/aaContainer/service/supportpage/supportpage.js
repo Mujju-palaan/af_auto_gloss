@@ -15,7 +15,7 @@ const Supportpage = () => {
             twitter: "javascript:void(0)",
         },
         {
-            avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+            avatar: "profile/profile_yusuf.png",
             name: "Yusuf",
             title: "Chief Technology Officer (CTO)",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -31,7 +31,7 @@ const Supportpage = () => {
             twitter: "javascript:void(0)",
         },
         {
-            avatar: "profile/profile_mujju.jpeg",
+            avatar: "profile/profile_mujju.png",
             name: "Mohammed Mujahid",
             title: "Head of designers",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -39,21 +39,21 @@ const Supportpage = () => {
             twitter: "javascript:void(0)",
         },
         {
-            avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+            avatar: "profile/profile_muddassir.png",
             name: "Muddassir Sheikh",
             title: "Product designer",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
         },
-        // {
-        //     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-        //     name: "Irfan",
-        //     title: "Product manager",
-        //     desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
-        //     linkedin: "javascript:void(0)",
-        //     twitter: "javascript:void(0)",
-        // },
+        {
+            avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+            name: "Hamid Hussain",
+            title: "Marketing Lead",
+            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+            linkedin: "javascript:void(0)",
+            twitter: "javascript:void(0)",
+        },
     ]
 
     return (

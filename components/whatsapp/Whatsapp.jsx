@@ -17,9 +17,9 @@ const Whatsapp = () => {
         allowEsc={false}
         height={350}
         notification={true}
-        notificationDelay={50}
+        notificationDelay={20}
         notificationSound={true} // ✅ Optional
-        notificationLoop={3}
+        notificationLoop={false}
         className="custom-whatsapp-chatbox"
         styles={{
           boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
