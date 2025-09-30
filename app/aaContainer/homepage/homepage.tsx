@@ -4,6 +4,7 @@ import Newsletter from '@/components/home/Newsletter'
 import Content from '../../../components/home/content'
 import Hero from './Hero'
 import Productall from '../product/product'
+import Testimonials from '@/app/testimonials/page'
 
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Content/>
       <Productall />
       <StatsContainer/>
+      <Testimonials />
       <Newsletter />
     </div>
   )
