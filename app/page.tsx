@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import styles from "./page.module.css";
-import Home from '../app/home/page'
+import Home from './(main)/home/page'
 
 
 

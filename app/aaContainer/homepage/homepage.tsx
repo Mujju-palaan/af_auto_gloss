@@ -4,7 +4,7 @@ import Newsletter from '@/components/home/Newsletter'
 import Content from '../../../components/home/content'
 import Hero from './Hero'
 import Productall from '../product/product'
-import Testimonials from '@/app/testimonials/page'
+import Testimonials from '@/app/(service)/testimonials/page'
 
 
 const HomePage = () => {

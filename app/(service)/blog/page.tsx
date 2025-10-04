@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogPage from '../aaContainer/service/blog/Blogpage';
+import BlogPage from '../../aaContainer/service/blog/Blogpage';
 
 const Page = () => {
   return (
