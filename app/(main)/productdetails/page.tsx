@@ -1,5 +1,5 @@
 import React from 'react'
-import Productdetailpage from '@/app/aaContainer/product/Productdetailpage'
+import Productdetailpage from '@/components/product/Productdetailpage'
 
 const page = () => {
   return (

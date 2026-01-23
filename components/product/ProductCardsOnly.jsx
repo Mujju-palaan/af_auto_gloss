@@ -3,7 +3,7 @@ import React from "react";
 import ProductCard from "@/components/cards/Productcard";
 import { ProductData } from "@/data/ProductData";
 
-const Productcardpage = () => {
+const ProductCardsOnly = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
       {/* Heading */}
@@ -27,4 +27,4 @@ const Productcardpage = () => {
   );
 };
 
-export default Productcardpage;
+export default ProductCardsOnly;

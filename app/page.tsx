@@ -1,16 +1,16 @@
-// import Image from "next/image";
-import styles from "./page.module.css";
-import Home from './(main)/home/page'
+import ProductCardsOnly from '@/components/product/ProductCardsOnly';
+import Content from '../components/home/Content';
+import Home_HeroSection from '../components/home/Home_HeroSection'
 
-
-
-export default function Page() {
+const  Page = ()  => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Home/>
-      </main>
+    <div>
+      <Home_HeroSection />
+      <Content />
+      <ProductCardsOnly />
       
     </div>
   );
 }
+
+export default Page

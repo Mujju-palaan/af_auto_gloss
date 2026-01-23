@@ -13,7 +13,7 @@ const Whatsapp = () => {
         chatMessage="Hello there! 🤝 How can we help?"
         placeholder="Type a message.."
         darkMode={false} // ✅ You can toggle this based on theme
-        allowClickAway={true}
+        allowClickAway={false}
         allowEsc={false}
         height={350}
         notification={true}
