@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div
-      className="flex flex-col dark:bg-gray-800 rounded-lg overflow-hidden 
+      className="flex flex-col bg-white rounded-lg overflow-hidden 
       shadow-xl cursor-pointer"
     >
       {/* Product Image */}

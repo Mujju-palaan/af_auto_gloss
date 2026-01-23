@@ -34,13 +34,13 @@ const Content = () => {
 
   return (
     <div>
-      <section className="text-gray-600 body-font ">
+      <section className=" body-font ">
         <div className="container px-5 md:py-10">
           <div className="flex flex-col text-center w-full md:mb-10">
             <h2 className="text-[14px] text-red-500 tracking-widest font-semibold title-font mb-1">
               AF AUTO GLOSS
             </h2>
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-red-600">
               Master Cleanse Reliac Heirloom
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed md:text-[16px] text-[12px]">
@@ -57,14 +57,14 @@ const Content = () => {
                 className="xl:w-1/4 lg:w-1/2 md:w-full px-8 border-l-2
                  border-gray-200 border-opacity-60"
               >
-                <h2 className="text-lg sm:text-xl text-gray-900 title-font mb-2
+                <h2 className="text-lg sm:text-xl text-red-600 title-font mb-2
                 font-semibold">
                   {data.title}
                 </h2>
                 <p className="leading-relaxed md:text-[16px] text-[12px] mb-4">
                   {data.description}
                 </p>
-                <a className="text-red-500 inline-flex items-center md:text-[14px] text-[12px] 
+                <a className="text-red-300 inline-flex items-center md:text-[14px] text-[12px] 
                 mb-4 cursor-pointer">
                   Learn More
                   <svg

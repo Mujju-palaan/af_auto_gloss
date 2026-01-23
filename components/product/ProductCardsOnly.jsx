@@ -5,9 +5,9 @@ import { ProductData } from "@/data/ProductData";
 
 const ProductCardsOnly = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <section className="py-12 px-4 sm:px-6 lg:px-16  dark:bg-gray-900 min-h-screen">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+      <h2 className="text-4xl font-bold text-center text-white-600 mb-12">
         Our Products
       </h2>
 

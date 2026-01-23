@@ -22,7 +22,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/navbar-footer/Navbar.js", "app/aaContainer/service/supportpage/supportpage.js", "app/(service)/support/page.tjs", "components/contact/contactformcomponents/home/Newsletter.jstter.js", "components/home/Content.jsx", "components/product/Productcardpage.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/navbar-footer/Navbar.jsx", "app/aaContainer/service/supportpage/supportpage.js", "app/(service)/support/page.tjs", "components/contact/contactformcomponents/home/Newsletter.jstter.js", "components/home/Content.jsx", "components/product/Productcardpage.jsx"],
   
   "exclude": ["node_modules"]
 }

@@ -28,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="shortcut icon" href='/favicon.ico' />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black/90`}>
         <Navbar/>
+
         {children}
         <Whatsapp/>
         <Footer/>
