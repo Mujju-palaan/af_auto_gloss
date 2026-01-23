@@ -1,10 +1,13 @@
 import React from 'react'
-import Privacypolicypage from '@/app/aaContainer/service/policy/privacypolicypage'
+import PolicyPage from '../../../components/policies/PolicyPage'
+import PrivacyPolicyData from '../../../data/PrivacyPolicy'
+import PolicyBanner from '@/components/policies/PolicyBanner'
 
 const Privacypolicy = () => {
   return (
     <div>
-      <Privacypolicypage/>
+      <PolicyBanner title={`Privacy Policy`} date={`Effective 23rd Sep, 2025`}/>
+      <PolicyPage PolicyData={PrivacyPolicyData} />
     </div>
   )
 }

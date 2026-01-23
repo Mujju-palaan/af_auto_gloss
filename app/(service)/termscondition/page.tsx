@@ -1,11 +1,14 @@
 import React from "react";
-import Termsconditionpage from "@/app/aaContainer/service/policy/termsconditionpage";
+import PolicyPage from "../../../components/policies/PolicyPage";
+import PolicyBanner from '../../../components/policies/PolicyBanner.jsx'
+import TermsData from "../../../data/Terms";
 
 const Termscondition = () => {
   return (
-    <>
-      <Termsconditionpage/>
-    </>
+    <div>
+      <PolicyBanner title={`Terms & Condition`} date={`Effective 23rd Sep, 2025`}/>
+      <PolicyPage PolicyData={TermsData} />
+    </div>
   );
 };
 

@@ -1,12 +1,15 @@
-import React from 'react'
-import Refundpolicypage from '@/app/aaContainer/service/policy/refundpolicypage'
+import React from "react";
+import PolicyPage from '../../../components/policies/PolicyPage'
+import RefundPolicyData from '../../../data/RefundPolicy'
+import PolicyBanner from "@/components/policies/PolicyBanner";
 
 const Refundpolicy = () => {
   return (
     <div>
-      <Refundpolicypage/>
+      <PolicyBanner title={`Refund Policy`} date={`Effective 23rd Sep, 2025`}/>
+      <PolicyPage PolicyData={RefundPolicyData} />
     </div>
-  )
-}
+  );
+};
 
-export default Refundpolicy
+export default Refundpolicy;
