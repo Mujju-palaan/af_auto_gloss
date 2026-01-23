@@ -67,7 +67,7 @@ export default function Status() {
   return (
     <div className="relative md:h-[420px] w-full overflow-hidden">
       <Image
-        src="/home/southwave-entertainment-events-status.jpg"
+        src="/afautogloss-products-cleaning-service-image-stats.jpg"
         alt="About Us"
         width={800}
         height={420}
