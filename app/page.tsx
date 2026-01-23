@@ -9,8 +9,9 @@ const  Page = ()  => {
     <div className='text-white/80'>
       <Banner />
       <Home_HeroSection />
-      <Content />
       <ProductCardsOnly />
+      <Content />
+      
       <Status />
       
     </div>
