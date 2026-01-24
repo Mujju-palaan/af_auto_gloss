@@ -42,7 +42,7 @@
     "components/product/Productdetailpage.jsx",
     "components/product/productdetailCard.jsx",
     ".next/dev/types/**/*.ts"
-, "components/product/ProductCard.jsx", "data/ProductData.js"  ],
+, "components/product/ProductCard.jsx", "data/ProductData.js", "components/product/product.jsx"  ],
   "exclude": [
     "node_modules"
   ]
