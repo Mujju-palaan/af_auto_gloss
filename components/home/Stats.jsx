@@ -77,9 +77,9 @@ export default function Status() {
 
       <div className="absolute inset-0 flex gap-3 items-center justify-around bg-black/30 
       text-white/90 text-center font-sans tracking-widest text-sm md:text-3xl font-semibold">
-        <StatItem to={100} suffix="+" label="Events Organised" />
+        <StatItem to={500} suffix="+" label="Total Clients" />
         <StatItem to={100} suffix="%" label="Clients Satisfied" delay={0.1} />
-        <StatItem to={60} suffix="+" label="Dance Floors" delay={0.1} />
+        <StatItem to={126} suffix="+" label="Areas Managed" delay={0.1} />
       </div>
     </div>
   );

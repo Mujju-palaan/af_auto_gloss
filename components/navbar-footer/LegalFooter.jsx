@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
-import { FaInstagram,FaFacebook,FaDiscord, FaTwitter, FaYoutube   } from "react-icons/fa";
+import { FaInstagram,FaFacebook,FaDiscord, FaTwitter, FaYoutube, FaLinkedin, FaWhatsapp  } 
+from "react-icons/fa";
 
 const LegalFooter = () => {
   const [year, setYear] = useState(new Date().getFullYear());
@@ -10,6 +11,11 @@ const LegalFooter = () => {
     setYear(new Date().getFullYear());
   }, []);
   const socialData = [
+    {
+      color: "text-green-500",
+      href: "https://wa.me/9966004662" ,
+      icon: FaWhatsapp ,
+    },
     {
       color: "text-[#ee2a7b]",
       href: "https://www.instagram.com/af_autogloss/#",
@@ -21,10 +27,15 @@ const LegalFooter = () => {
       icon: FaFacebook,
     },
     {
-      color: "text-[#5865F2]",
-      href: "",
-      icon: FaDiscord,
+      color: "text-[#004182]",
+      href: "https://www.linkedin.com/company/afautogloss/",
+      icon: FaLinkedin,
     },
+    // {
+    //   color: "text-[#5865F2]",
+    //   href: "",
+    //   icon: FaDiscord,
+    // },
     {
       color: "text-blue-500",
       href: "",
@@ -40,7 +51,7 @@ const LegalFooter = () => {
     <div className="max-w-7xl mx-auto px-4 md:px-8">
       <div className="py-8 border-t border-gray-700 items-center justify-between sm:flex">
         <Fragment>
-          <p className="text-xs md:text-lg text-center">{`© ${year} Southwave Entertainment LTD. All rights reserved.`}</p>
+          <p className="text-xs md:text-lg text-center">{`© ${year} AF Autogloss pvt LTD. All rights reserved.`}</p>
         </Fragment>
 
         <div className="flex justify-center gap-x-6 hover:text-gray-400 mt-6 md:pr-15">

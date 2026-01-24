@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import ProductCard from "@/components/cards/Productcard";
+import ProductCard from "../../components/product/ProductCard";
 import { ProductData } from "@/data/ProductData";
 
 const ProductCardsOnly = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-16  dark:bg-gray-900 min-h-screen">
+    <section className="py-12 px-4 sm:px-6 lg:px-16  min-h-screen">
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-center text-white-600 mb-12">
+      <h2 className="text-4xl text-white font-bold text-center text-white-600 mb-12">
         Our Products
       </h2>
 

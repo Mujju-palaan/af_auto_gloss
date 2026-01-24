@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import ProductCard from "@/components/cards/Productcard";
-import Productdetails from "@/components/cards/productdetail";
+import ProductCard from "@/components/product/ProductCard";
+import Productdetails from "@/components/product/productdetailCard";
 import { ProductData } from "@/data/ProductData";
 
 interface Product {

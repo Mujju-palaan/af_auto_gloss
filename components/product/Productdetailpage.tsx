@@ -1,12 +1,12 @@
 import React from 'react'
-import Productdetails from '@/components/cards/productdetail'
+import ProductdetailsCard from '@/components/product/productdetailCard'
 import { ProductData } from '@/data/ProductData'
 
 const Productdetailpage = () => {
   return (
     <div>
         {ProductData.map((product, index) => (
-        <Productdetails
+        <ProductdetailsCard
             key={index}
             title={product.title}
             image={product.image}
