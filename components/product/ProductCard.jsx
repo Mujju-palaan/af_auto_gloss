@@ -1,18 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
-interface ProductCardProps {
-  image: string;
-  title: string;
-  price: string | number;
-  category?: string;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({
-  image,
-  title,
-  price,
-  category,
-}) => {
+const ProductCard = ({ id, image, title, price, category }) => {
   return (
     <div
       className="flex flex-col bg-white rounded-lg overflow-hidden 
@@ -22,11 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <div className="w-full h-full overflow-hidden">
         {" "}
         {/* ⬅️ increased from h-56 to h-80 */}
-        <img
-          className="w-full h-full object-contain"
-          src={image}
-          alt={title}
-        />
+        <img className="w-full h-full object-contain" src={image} alt={title} />
       </div>
 
       {/* Product Details */}
@@ -39,9 +24,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
           {title}
         </h2>
-        <p className="mt-1 text-gray-700 dark:text-gray-300 font-bold">
-          ₹{price}
-        </p>
+        <div className="flex justify-between mt-1 text-gray-700 dark:text-gray-300 font-bold">
+          <p>₹{price}</p>
+          <p className="text-red-700">
+            <Link href={`/product?product=${id}`}>View →</Link>
+          </p>
+        </div>
       </div>
     </div>
   );
