@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -10,17 +10,48 @@ import TestimonialCard from "@/components/cards/TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { id: 1, avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg", name: "Martin escobar", title: "Founder of meta", quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { id: 2, avatar: "https://randomuser.me/api/portraits/women/79.jpg", name: "Angela stian", title: "Product designer", quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet." },
-  { id: 3, avatar: "https://randomuser.me/api/portraits/men/86.jpg", name: "Karim ahmed", title: "DevOp engineer", quote: "There is no one who loves pain itself, who seeks after it and wants to have it." },
-  { id: 4, avatar: "https://randomuser.me/api/portraits/men/65.jpg", name: "Liam smith", title: "Backend Developer", quote: "Additional testimonial to fill 4 cards for testing grid layout." },
-  { id: 5, avatar: "https://randomuser.me/api/portraits/women/50.jpg", name: "Sophia Lee", title: "UX Designer", quote: "This is another testimonial example for the slider." },
+  {
+    id: 1,
+    avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+    name: "Martin escobar",
+    title: "Founder of meta",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+    name: "Angela stian",
+    title: "Product designer",
+    quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+  },
+  {
+    id: 3,
+    avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+    name: "Karim ahmed",
+    title: "DevOp engineer",
+    quote:
+      "There is no one who loves pain itself, who seeks after it and wants to have it.",
+  },
+  {
+    id: 4,
+    avatar: "https://randomuser.me/api/portraits/men/65.jpg",
+    name: "Liam smith",
+    title: "Backend Developer",
+    quote: "Additional testimonial to fill 4 cards for testing grid layout.",
+  },
+  {
+    id: 5,
+    avatar: "https://randomuser.me/api/portraits/women/50.jpg",
+    name: "Sophia Lee",
+    title: "UX Designer",
+    quote: "This is another testimonial example for the slider.",
+  },
 ];
 
-const Testimonial: React.FC = () => {
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
-  const paginationRef = useRef<HTMLDivElement>(null);
+const Testimonial = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const paginationRef = useRef(null);
 
   return (
     <div className="mt-12 px-4 sm:px-6 lg:px-8 relative">
@@ -85,10 +116,7 @@ const Testimonial: React.FC = () => {
       </Swiper>
 
       {/* Pagination container below slider */}
-      <div
-        ref={paginationRef}
-        className="flex justify-center mt-6 space-x-2"
-      />
+      <div ref={paginationRef} className="flex justify-center mt-6 space-x-2" />
     </div>
   );
 };
