@@ -1,6 +1,6 @@
 import React from "react";
-import PolicyPage from "../../../components/policies/PolicyPage";
-import PolicyBanner from '../../../components/policies/PolicyBanner.jsx'
+import PolicyPage from "../../../components/(service)/policies/PolicyPage";
+import PolicyBanner from '../../../components/(service)/policies/PolicyBanner.jsx'
 import TermsData from "../../../data/Terms";
 
 const Termscondition = () => {

@@ -1,12 +1,12 @@
 import React from 'react'
-import FaqsPage from '@/app/aaContainer/service/faqpage/faqpage'
+import Faq from '@/components/(service)/faqs/Faq'
 
-const Faq = () => {
+const Page = () => {
   return (
     <div>
-      <FaqsPage/>
+      <Faq/>
     </div>
   )
 }
 
-export default Faq
+export default Page

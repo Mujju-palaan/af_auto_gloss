@@ -1,7 +1,7 @@
 import React from "react";
-import PolicyPage from '../../../components/policies/PolicyPage'
+import PolicyPage from '../../../components/(service)/policies/PolicyPage'
 import RefundPolicyData from '../../../data/RefundPolicy'
-import PolicyBanner from "@/components/policies/PolicyBanner";
+import PolicyBanner from "@/components/(service)/policies/PolicyBanner";
 
 const Refundpolicy = () => {
   return (

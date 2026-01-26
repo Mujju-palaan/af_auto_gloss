@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
@@ -10,7 +12,7 @@ const Navbar = () => {
     { title: "Products", path: "/product" },
     { title: "Contact", path: "/contact" },
     { title: "Support", path: "/support" },
-    { title: "FAQ's", path: "/faq" },
+    { title: "Faq's", path: "/faq" },
   ];
 
   useEffect(() => {
@@ -22,21 +24,24 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-red-600 pb-0 md:text-sm 
-        ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" 
-            : ""}`}
+      className={`bg-black-600 xs:bg-stone-600 pb-0 md:text-sm 
+        ${
+          state
+            ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
+            : ""
+        }`}
     >
-      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+      <div className="lg:gap-x-14 md:gap-x-0 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:block">
-          <a href="/">
+          <Link href="/">
             <img
               src="company/AF_logo.png"
               width={80}
               height={30}
-              alt="Float UI logo"
+              alt="AF logo"
             />
-          </a>
-          <div className="md:hidden">
+          </Link>
+          <div className="lg:hidden">
             <button
               className="menu-btn text-gray-500 hover:text-gray-800"
               onClick={() => setState(!state)}
@@ -74,29 +79,51 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"} `}
+          className={`flex-1 items-center mt-6 md:mt-0 md:flex ${state ? "block" : "hidden"} `}
         >
-          <ul className=" justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+          <ul className=" justify-center items-center space-y-2 md:flex md:space-x-12 md:space-y-0">
             {navigation.map((item, idx) => {
               return (
-                <li key={idx} className="text-white hover:text-gray-700 font-semibold
-                text-xl">
-                  <a href={item.path} className="block">
+                <motion.li
+                  key={idx}
+                  initial={{ color: "#ffffff" }}
+                  whileHover={{
+                    scale: 1.08,
+                    color: "#dc2626", // red-600
+                    textShadow: "0px 0px 14px rgba(220,38,38,0.9)",
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                  }}
+                  className="font-normal text-xl relative overflow-hidden"
+                >
+                  <Link href={item.path} className="block">
                     {item.title}
-                  </a>
-                </li>
+                  </Link>
+
+                  {/* Shine sweep */}
+                  <motion.span
+                    initial={{ x: "-120%", opacity: 0 }}
+                    whileHover={{ x: "120%", opacity: 1 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="absolute inset-0 bg-gradient-to-r
+               from-transparent via-red-500/40 to-transparent"
+                  />
+                </motion.li>
               );
             })}
           </ul>
           {/* ---login/Signup Buttons--- */}
-          <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <a
+          <div className="flex-1 gap-x-4 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
+            <Link
               href=""
-              className="block text-gray-700 hover:text-gray-900"
+              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
               Log in
-            </a>
-            <a
+            </Link>
+            <Link
               href=""
               className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
@@ -113,7 +140,7 @@ const Navbar = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

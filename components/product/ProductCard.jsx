@@ -15,16 +15,16 @@ const ProductCard = ({ id, image, title, price, category }) => {
       </div>
 
       {/* Product Details */}
-      <div className="px-4 py-2">
+      <div className="px-4 py-2 text-black">
         {category && (
           <h3 className="text-gray-500 text-xs uppercase tracking-widest mb-1">
             {category}
           </h3>
         )}
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-lg font-semibold ">
           {title}
         </h2>
-        <div className="flex justify-between mt-1 text-gray-700 dark:text-gray-300 font-bold">
+        <div className="flex justify-between mt-1 text-gray-700 font-bold">
           <p>₹{price}</p>
           <p className="text-red-700">
             <Link href={`/product?product=${id}`}>View →</Link>

@@ -1,10 +1,10 @@
 import React from 'react'
-import BlogPage from '../../aaContainer/service/blog/Blogpage';
+import Blog from '../../../components/(service)/blog/Blog';
 
 const Page = () => {
   return (
     <>
-      <BlogPage/>
+      <Blog/>
     </>
   );
 };

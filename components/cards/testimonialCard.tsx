@@ -8,7 +8,7 @@ interface TestimonialProps {
   quote: string;
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({
+const TestimonialCard: React.FC<TestimonialProps> = ({
   avatar,
   name,
   title,
@@ -40,4 +40,4 @@ const Testimonial: React.FC<TestimonialProps> = ({
   );
 };
 
-export default Testimonial;
+export default TestimonialCard;

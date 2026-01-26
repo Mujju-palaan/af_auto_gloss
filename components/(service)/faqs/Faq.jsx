@@ -94,10 +94,10 @@ const faqs = [
   ],
 ];
 
-const Faqpage = () => {
+const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
 
-  const toggleQuestion = (index : any) => {
+  const toggleQuestion = (index) => {
     setOpenQuestion((openQuestion === index) ? null : index);
   };
 
@@ -167,4 +167,4 @@ const Faqpage = () => {
   );
 }
 
-export default Faqpage
+export default Faq

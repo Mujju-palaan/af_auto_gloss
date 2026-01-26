@@ -2,7 +2,7 @@ import React from 'react'
 import Blogcard from '@/components/cards/Blogcard'
 import { BlogData } from '@/data/blogData';
 
-const BlogPage = () => {
+const Blog = () => {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 p-6">
       {BlogData.map((blog, index) => (
@@ -18,4 +18,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage
+export default Blog

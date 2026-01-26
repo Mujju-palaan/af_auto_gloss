@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Testimonial from "@/components/cards/testimonialCard";
+import TestimonialCard from "@/components/cards/testimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -17,7 +17,7 @@ const testimonials = [
   { id: 5, avatar: "https://randomuser.me/api/portraits/women/50.jpg", name: "Sophia Lee", title: "UX Designer", quote: "This is another testimonial example for the slider." },
 ];
 
-const TestimonialPage: React.FC = () => {
+const Testimonial: React.FC = () => {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const paginationRef = useRef<HTMLDivElement>(null);
@@ -73,7 +73,7 @@ const TestimonialPage: React.FC = () => {
       >
         {testimonials.map((t) => (
           <SwiperSlide key={t.id}>
-            <Testimonial
+            <TestimonialCard
               id={t.id}
               avatar={t.avatar}
               name={t.name}
@@ -93,4 +93,4 @@ const TestimonialPage: React.FC = () => {
   );
 };
 
-export default TestimonialPage;
+export default Testimonial;

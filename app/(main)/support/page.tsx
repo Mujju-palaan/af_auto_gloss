@@ -1,13 +1,13 @@
 import React from 'react'
-import Supportpage from '../../aaContainer/service/supportpage/supportpage'
+import Support from '@/components/support/Support'
 
-const Support = () => {
+const Page = () => {
   return (
     <div>
-      <Supportpage/>
+      <Support/>
     </div>
   )
 }
 
-export default Support
+export default Page
 

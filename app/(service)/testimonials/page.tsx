@@ -1,7 +1,7 @@
 import React from "react";
-import TestimonialPage from "@/app/aaContainer/service/testimonial/TestimonialPage";
+import Testimonial from "@/components/(service)/testimonial/Testimonial";
 
-const Testimonials = () => {
+const Page = () => {
   return (
     <div className="bg-white 500">
       <section className="py-14">
@@ -18,7 +18,7 @@ const Testimonials = () => {
           </div>
 
           <div>
-            <TestimonialPage />
+            <Testimonial />
           </div>
         </div>
       </section>
@@ -26,4 +26,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Page;
