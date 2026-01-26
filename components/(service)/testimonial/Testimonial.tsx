@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import TestimonialCard from "@/components/cards/testimonialCard";
+import TestimonialCard from "@/components/cards/TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
