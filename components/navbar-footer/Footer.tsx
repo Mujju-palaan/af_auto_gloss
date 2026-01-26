@@ -6,25 +6,25 @@ const Footer = () => {
   const navigation = {
     sale: [
       { name: "Home", href: "/" },
-      { name: "Events", href: "/events" },
+      { name: "Products", href: "/product" },
       { name: "Service", href: "/services" },
       // { name: "Register Discounts", href: "/comingsoon" },
     ],
     about: [
       { name: "About us", href: "/about" },
-      // { name: "Work With Us", href: "/comingsoon" },
+      { name: "Work With Us", href: "/comingsoon" },
       { name: "Blogs", href: "/blog" },
       { name: "Testimonials", href: "/testimonials" },
     ],
-    buy: [
+    policy: [
       { name: "Terms & Condition", href: "/terms&condition" },
       { name: "Privacy Policy", href: "/privacypolicy" },
       { name: "Refund Policy", href: "/refundpolicy" },
-      // { name: "Shipping Policy", href: "/shippingpolicy" },
+      { name: "Shipping Policy", href: "/shippingpolicy" },
     ],
     help: [
       { name: "Contact", href: "/contact" },
-      // { name: "How to Buy", href: "/comingsoon" },
+      { name: "How to Buy", href: "/comingsoon" },
       { name: "Support", href: "/support" },
       { name: "FAQ", href: "/faqs" },
     ],
@@ -90,13 +90,13 @@ const Footer = () => {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-xl font-bold leading-6 text-red-600">
-                    Buying
+                    Policies
                   </h3>
                   <ul
                     role="list"
                     className="md:mt-6 mt-4 md:space-y-4 text-[12px] md:text-lg"
                   >
-                    {navigation.buy.map((item) => (
+                    {navigation.policy.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.href}
