@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function PolicyPage({ PolicyData }) {
-  const [active, setActive] = useState(1);
+export default function PrivacyPolicyPage({ PolicyData }) {
+  const [active, setActive] = useState("about-us");
 
   /* -------- Scroll Spy -------- */
   useEffect(() => {
@@ -58,8 +58,8 @@ export default function PolicyPage({ PolicyData }) {
                   onClick={() => handleScrollTo(item.id)}
                   className={`block text-left text-sm w-full transition-colors cursor-pointer ${
                     active === item.id
-                      ? "text-indigo-600 font-medium"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? "text-red-600 font-medium"
+                      : "text-stone-600 hover:text-red-400"
                   }`}
                 >
                   {item.title}
@@ -69,7 +69,7 @@ export default function PolicyPage({ PolicyData }) {
                 {active === item.id && (
                   <motion.span
                     layoutId="active-indicator"
-                    className="absolute -left-[17px] top-1 h-4 w-1 rounded-full bg-indigo-600"
+                    className="absolute -left-[17px] top-1 h-4 w-1 rounded-full bg-red-600"
                   />
                 )}
               </li>
@@ -90,7 +90,7 @@ export default function PolicyPage({ PolicyData }) {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h1 className="text-gray-600">{data.info}</h1>
-              <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-900">
+              <h3 className="md:text-2xl text-xl font-semibold mb-4 text-red-600">
                 {data.title}
               </h3>
 
@@ -103,14 +103,14 @@ export default function PolicyPage({ PolicyData }) {
 
               {/* If points is a STRING */}
               {typeof data.points === "string" && (
-                <p className="text-gray-500 leading-relaxed md:text-base text-sm">
+                <p className="text-red-600 leading-relaxed md:text-base text-sm">
                   {data.points}
                 </p>
               )}
 
               {/* If points is an ARRAY */}
               {Array.isArray(data.points) && data.points.length > 0 && (
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+                <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-6">
                   {data.points.map((li, i) => (
                     <li key={i} className="leading-relaxed">
                       {li}
