@@ -8,7 +8,7 @@ const ProductdetailsCard = forwardRef(
       <div ref={ref}>
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 py-4 mx-auto">
-            <div className="lg:w-4/5 mx-auto flex flex-wrap">
+            <div className="lg:w-4/5 mx-auto flex flex-wrap border-2 rounded-xl p-4">
               <img
                 className="lg:w-1/2 w-full object-cover object-center rounded"
                 src={image}
@@ -32,7 +32,7 @@ const ProductdetailsCard = forwardRef(
                         <IoIosStar key={i} />
                       ) : (
                         <IoIosStarOutline key={i} />
-                      )
+                      ),
                     )}
                   </span>
                   <span className="text-gray-600 ml-3">
@@ -48,22 +48,39 @@ const ProductdetailsCard = forwardRef(
                     Key Benefits:
                   </h3>
                   <ul className="ml-4 list-disc">
-                    {product_description.benefits.map((item, i) => (
+                    {product_description.benefits?.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
 
-                  <div className="flex gap-2 mt-3">
-                    <h3 className="font-semibold text-white">
-                      Dilution Ratio:
-                    </h3>
-                    <p>{product_description.dilution}</p>
-                  </div>
-
-                  <div className="flex gap-2">
+                  {/* Dilution Ratio: */}
+                  {product_description.dilution && (
+                    <div className="flex gap-2 mt-3">
+                      <h3 className="font-semibold text-white">
+                        Dilution Ratio:
+                      </h3>
+                      <p>
+                        {product_description.dilution
+                          ? product_description.dilution
+                          : "Not specified"}
+                      </p>
+                    </div>
+                  )}
+                  {/* Ideal For / Recommended For */}
+                  {product_description.idealFor && (
+                    <div className="flex gap-2 mt-2">
                     <h3 className="font-semibold text-white">Ideal For:</h3>
                     <p>{product_description.idealFor}</p>
                   </div>
+                  )}
+
+                  {product_description.RecommendedFor && (
+                    <div className="flex gap-2 mt-2">
+                    <h3 className="font-semibold text-white">Recommended For:</h3>
+                    <p>{product_description.RecommendedFor}</p>
+                  </div>
+                  )}
+                  
                 </div>
 
                 {/* Quantity */}
@@ -97,7 +114,7 @@ const ProductdetailsCard = forwardRef(
         </section>
       </div>
     );
-  }
+  },
 );
 
 ProductdetailsCard.displayName = "ProductdetailsCard";

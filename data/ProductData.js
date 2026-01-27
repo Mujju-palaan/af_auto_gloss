@@ -92,16 +92,27 @@ export const ProductData = [
         "Non-harmful formula, suitable for regular use",
       ],
       dilution: "1:10",
-      idealFor: "Car washes, service centres, and dealerships",
+      RecommendedFor: "Car washes, service centres, and dealerships",
     },
   },
-  // {
-  //   id: 6,
-  //   image: "/product/Product_GlassCleaner.jpg",
-  //   title: "Microfiber Car Cloth",
-  //   reviews:'4',
-  //   product_description:'“Our high-quality Microfiber Car Cloth is expertly crafted to deliver exceptional performance in cleaning, drying, and detailing. Engineered with ultra-fine, lint-free fibers, it gently lifts and traps dust, dirt, and residues without causing scratches or swirl marks on delicate surfaces such as paint, glass, chrome, and interiors. Its superior absorbency allows for rapid water uptake, ensuring fast drying and a streak-free finish with minimal effort. Durable, reusable, and easy to maintain, this professional-grade cloth is ideal for washing, polishing, buffing, and finishing, making it an essential tool for achieving a flawless, showroom-quality appearance every time.”',
-  //   price:'(price vary)'
-  //   // ,href:'/product_details/'
-  // },
+  {
+    id: 6,
+    image: "/product/Product_GlassCleaner.jpg",
+    title: "Microfiber Car Cloth",
+    reviews: "5",
+    price: "200.00/piece",
+    product_description: {
+      summary:
+        "Glass Cleaner is a powerful yet safe cleaning solution formulated to remove dirt, fingerprints, water stains, and road grime from automotive glass surfaces without leaving streaks or residue. Its advanced formula delivers crystal-clear visibility while remaining gentle on all types of vehicle glass, enhancing both safety and appearance.",
+      benefits: [
+        "Crystal-clear, streak-free finish",
+        "Effectively removes dirt, grease, fingerprints, and water marks",
+        "Safe for all automotive glass, including windshields, windows, and mirrors",
+        "Non-harmful, residue-free formula suitable for frequent use",
+      ],
+      // dilution: "1:10",
+      RecommendedFor:
+        "Car washes, service centres, dealerships, and professional detailing",
+    },
+  },
 ];
