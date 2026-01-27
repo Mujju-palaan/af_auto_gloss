@@ -2,13 +2,15 @@
 import React from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { ProductData } from "@/data/ProductData";
+import Heading_desc from "../Heading_desc";
 
 const ProductCardsOnly = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-16 min-h-screen">
-      <h2 className="text-4xl text-white font-bold text-center mb-12">
+      {/* <h2 className="text-4xl text-white font-bold text-center mb-12">
         Our Products
-      </h2>
+      </h2> */}
+      <Heading_desc title={`Our Products`} description={`High-quality, vehicle-safe auto care products manufactured in India, trusted by professionals for effective cleaning, superior shine, and reliable daily use.`} />
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {ProductData.map((product) => (

@@ -5,7 +5,7 @@ const Home_HeroSection = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center gap-6 md:px-20 m-2">
       {/* Text Section */}
-      <div className="md:w-1/2 w-full md:pt-16 p-4">
+      <div className="md:w-1/2 w-full p-4">
         
         <h3 className="md:text-xl text-red-300 mt-2">
           Natural Auto Care Products Manufactured in India.
