@@ -28,8 +28,10 @@ const FaqsData = [
     question: "3. Who can use your products ?",
     answer: (
       <>
-        Our products are intended for 
-        <strong> car dealers, service centres, workshops, car wash units, and detailing
+        Our products are intended for
+        <strong>
+          {" "}
+          car dealers, service centres, workshops, car wash units, and detailing
           professionals
         </strong>
         . They are suitable for commercial and professional applications.
@@ -74,9 +76,89 @@ const FaqsData = [
     answer: (
       <>
         Since our products are
-        <strong> naturally made</strong>, 
-        minor variations in colour or fragrance may occur between batches.
-        These variations do not affect the product’s quality or performance.
+        <strong> naturally made</strong>, minor variations in colour or
+        fragrance may occur between batches. These variations do not affect the
+        product’s quality or performance.
+      </>
+    ),
+  },
+  {
+    question: "8. Do you offer bulk supply or wholesale pricing ?",
+    answer: (
+      <>
+        Yes. We offer
+        <strong> bulk supply options </strong>
+        bulk supply options for dealers, distributors, and service centres.
+        Pricing depends on order quantity and requirements.
+      </>
+    ),
+  },
+  {
+    question: "9. Do you provide private labeling or custom packaging ?",
+    answer: (
+      <>
+        Private labeling and custom packaging options may be available based on
+        order volume. Please contact our team for more details.
+      </>
+    ),
+  },
+  {
+    question: "10. What is your minimum order quantity (MOQ) ?",
+    answer: (
+      <>
+        The <strong>minimum order quantity</strong> varies depending on the
+        product and packaging type. Please get in touch with us to discuss your
+        requirements.
+      </>
+    ),
+  },
+  {
+    question: "11. How are the products packed and delivered ?",
+    answer: (
+      <>
+        Our products are securely packed to prevent leakage or damage during
+        transit. Delivery timelines depend on order size and location.
+      </>
+    ),
+  },
+  {
+    question:
+      "12. What should I do if I receive a damaged or defective product ?",
+    answer: (
+      <>
+        In case of manufacturing defects or transit damage, please inform us
+        within <strong>48 hours of delivery</strong> along with images or
+        videos. Our team will review and assist with replacement as per our
+        policy.
+      </>
+    ),
+  },
+  {
+    question: "13. Do you provide technical support or usage guidance ?",
+    answer: (
+      <>
+        Yes, We provide
+        <strong> usage instructions, dilution guidance, and basic technical support </strong>
+        to ensure correct application and best results.
+      </>
+    ),
+  },
+  {
+    question: "14. Where are your products manufactured ?",
+    answer: (
+      <>
+        All our auto care products are <strong>manufactured in India</strong> at
+        our own facility, following quality-focused processes.
+      </>
+    ),
+  },
+  {
+    question: "15. How can I place an order or contact you ?",
+    answer: (
+      <>
+        You can place an order or contact us through our
+        <strong> website contact form, phone number, or email </strong>
+        provided on the Contact Us page.
       </>
     ),
   },

@@ -27,7 +27,7 @@ const ProductCard = ({ id, image, title, price, category }) => {
         <div className="flex justify-between mt-1 text-gray-700 font-bold">
           <p>₹{price}</p>
           <p className="text-red-700">
-            <Link href={`/product?product=${id}`}>View →</Link>
+            <Link href={`/product?product=${id}`}>Show More →</Link>
           </p>
         </div>
       </div>

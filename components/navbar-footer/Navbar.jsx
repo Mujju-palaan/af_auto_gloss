@@ -12,7 +12,7 @@ const Navbar = () => {
     { title: "Products", path: "/product" },
     { title: "Contact", path: "/contact" },
     { title: "Support", path: "/support" },
-    { title: "Faq's", path: "/faq" },
+    { title: "Faq's", path: "/faqs" },
   ];
 
   useEffect(() => {
