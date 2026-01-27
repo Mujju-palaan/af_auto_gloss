@@ -3,41 +3,100 @@ export const ProductData = [
     id: 1,
     image: "/product/Product_Foam.jpg",
     title: "Snow Foam Shampoo",
-    reviews:'5',
-    product_description: '“Our premium Car Wash Foam is meticulously engineered to deliver a rich, high-density lather that adheres firmly to every contour of the vehicle’s surface. This advanced formulation effectively encapsulates and lifts away dirt, grease, and stubborn road grime, ensuring a thorough yet gentle cleansing process. Its pH-balanced composition is scientifically designed to protect delicate automotive paint, clear coats, and wax layers from potential damage, guaranteeing a scratch-free finish. The high-foaming action not only enhances cleaning efficiency but also leaves behind a radiant, glossy, showroom-quality shine. Ideal for enthusiasts and professionals alike, it provides a luxury car wash experience at home.”',
-    price:'600.00',
-    // href:'/product_details/1'
+    reviews: "5",
+    price: "600.00",
+    product_description: {
+      summary:
+        "Our Foam Wash is a naturally formulated car shampoo that effectively removes dirt, dust, and road grime without stripping existing paint protection or dulling the vehicle’s finish. Its gentle yet powerful cleansing action ensures a safe wash experience while maintaining the original gloss and integrity of automotive surfaces.",
+      benefits: [
+        "Gentle on paint and clear coat",
+        "Produces rich foam for deep cleaning",
+        "Leaves a smooth, glossy finish",
+        "Safe for regular use",
+      ],
+      dilution: "1:10",
+      idealFor: "Car washes, dealers, detailing studios",
+    },
   },
+
   {
     id: 2,
     image: "/product/Product_Dashboard_Polish.jpg",
-    title: "Dashboard Cleaner",
-    reviews:'5',
-    product_description:'“Our advanced Dashboard Cleaner is expertly formulated to provide superior care for all interior surfaces, delivering both cleanliness and protection in a single application. Its innovative composition effectively lifts away dust, dirt, and stubborn stains while rejuvenating the surface with a natural, long-lasting sheen. Designed with a non-greasy finish, it ensures a smooth, residue-free appearance that enhances driving comfort and aesthetics. Enriched with powerful UV-blocking agents, it safeguards against harmful sun exposure, preventing fading, discoloration, and cracking over time. Consistently maintaining a fresh, clean, and showroom-quality look, this professional-grade solution is ideal for those who value automotive interior excellence.”',
-    price:'1000.00',
-    // href:'/product_details/2'
+    title: "Dashboard Poish",
+    reviews: "5",
+    price: "1000.00",
+    product_description: {
+      summary:
+        "Designed to restore and protect interior surfaces, our Dashboard Polish enhances the natural appearance of dashboards while helping prevent cracking, fading, and premature aging. Its refined formulation delivers a clean, well-maintained look without compromising surface integrity, making it ideal for regular interior care.",
+      benefits: [
+        "Non-sticky, non-greasy finish",
+        "Enhances natural shine",
+        "Protects against dust & UV damage",
+      ],
+      dilution: "1:10",
+      idealFor: "Interior detailing & showroom preparation",
+    },
   },
   {
     id: 3,
     image: "/product/Product_TyrePolish.png",
     title: "Tyre Polish",
-    reviews:'5',
-    product_description:'“Our premium Tyre Polish is scientifically developed to restore and enhance the natural appearance of vehicle tyres, delivering a deep, long-lasting black sheen that instantly elevates overall aesthetics. Its advanced polymer-rich formula creates a protective barrier against dust, dirt, and environmental contaminants, while effectively shielding tyres from harmful UV rays, premature fading, and surface cracking. Engineered for durability, the treatment maintains a cleaner, glossier finish for extended periods, even in challenging weather conditions. With regular application, it not only revitalizes tyre surfaces but also contributes to a bold, showroom-ready look, making it the ideal solution for automotive perfectionists.”',
-    price:'1200.00',
-    // href:'/product_details/3'
-    
+    reviews: "5",
+    price: "1200.00",
+    product_description: {
+      summary:
+        "Our Tyre Polish delivers a deep black shine while nourishing the rubber, helping extend tyre life without the use of harmful chemicals. Its gentle yet effective formulation enhances appearance while maintaining the flexibility and integrity of tyre surfaces, making it suitable for regular use.",
+      benefits: [
+        "Long-lasting glossy finish",
+        "Prevents tyre dryness & cracking",
+        "Water-resistant formula",
+        "Safe for all tyre types",
+      ],
+      dilution: "1:10",
+      idealFor: "Showroom cars & professional detailing",
+    },
   },
   {
     id: 4,
     image: "/product/Product_GlassCleaner.jpg",
+    title: "Degreaser",
+    reviews: "5",
+    price: "1000.00",
+    product_description: {
+      summary:
+        "A powerful yet safe degreaser formulated to effectively remove oil, grease, and stubborn grime from engines and mechanical components. Its advanced cleaning action penetrates heavy buildup without damaging metal, rubber, or plastic surfaces, making it ideal for both routine maintenance and professional automotive detailing.",
+      benefits: [
+        "Strong cleaning action",
+        "Safe on metal & engine surfaces",
+        "Low odor, eco-conscious formulation",
+        "Effective with minimal product usage",
+      ],
+      dilution: "1:10",
+      idealFor: "Engine bays, workshops & service centers",
+    },
+  },
+
+  {
+    id: 5,
+    image: "/product/Product_GlassCleaner.jpg",
     title: "Glass Cleaner",
-    reviews:'5',
-    product_description:'“Our advanced Glass Cleaner is meticulously formulated to deliver unmatched clarity and cleanliness for all automotive glass surfaces. Its high-performance solution effortlessly eliminates dust, dirt, smudges, fingerprints, watermarks, and even stubborn stains, ensuring a crystal-clear, streak-free finish. The quick-dry, anti-haze technology enhances visibility in all driving conditions, significantly improving both aesthetics and safety. Specially engineered to resist re-soiling, it keeps windows and mirrors spotless for longer, maintaining a sparkling, like-new appearance. Safe for tinted glass and mirrors, this professional-grade cleaner is the ideal choice for vehicle owners who demand precision, brilliance, and long-lasting results with every application.”',
-    price:'500.00'
-    // ,href:'/product_details/4'
+    reviews: "5",
+    price: "500.00",
+    product_description: {
+      summary:
+        "Glass Cleaner is a powerful yet safe cleaning solution designed to remove dirt, fingerprints, water stains, and road grime from vehicle glass surfaces without leaving streaks or residue. Its effective formulation delivers clear, spotless results while being gentle on all types of automotive glass, enhancing both visibility and appearance.",
+      benefits: [
+        "Streak-free and crystal-clear finish",
+        "Removes tough dirt, grease, and fingerprints",
+        "Safe for all glass surfaces, including windshields & mirrors",
+        "Non-harmful formula, suitable for regular use",
+      ],
+      dilution: "1:10",
+      idealFor: "Car washes, service centres, and dealerships",
+    },
   },
   // {
-  //   id: 5,
+  //   id: 6,
   //   image: "/product/Product_GlassCleaner.jpg",
   //   title: "Microfiber Car Cloth",
   //   reviews:'4',
@@ -45,5 +104,4 @@ export const ProductData = [
   //   price:'(price vary)'
   //   // ,href:'/product_details/'
   // },
-  
 ];
