@@ -25,7 +25,11 @@ const ServiceCard = ({ image, title, description, slug }) => {
       <motion.button
         whileHover={{ x: 6 }}
         transition={{ duration: 0.25 }}
-        className="self-start text-indigo-500 font-medium cursor-pointer"
+        className="self-start text-indigo-500 font-medium cursor-pointer
+        transition-all duration-300 ease-out
+        hover:scale-[1.08]
+        hover:text-red-600
+        hover:drop-shadow-[0_0_6px_rgba(220,38,38,0.9)]"
       >
         <Link href={`/services?service=${slug}`}>View More →</Link>
       </motion.button>

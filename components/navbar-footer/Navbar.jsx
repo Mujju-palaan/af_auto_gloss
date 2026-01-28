@@ -90,7 +90,7 @@ const Navbar = () => {
                   whileHover={{
                     scale: 1.08,
                     color: "#dc2626", // red-600
-                    textShadow: "0px 0px 14px rgba(220,38,38,0.9)",
+                    textShadow: "0px 0px 6px rgba(220,38,38,0.9)",
                   }}
                   transition={{
                     type: "spring",

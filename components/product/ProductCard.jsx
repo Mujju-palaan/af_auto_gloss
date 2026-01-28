@@ -21,12 +21,16 @@ const ProductCard = ({ id, image, title, price, category }) => {
             {category}
           </h3>
         )}
-        <h2 className="text-lg font-semibold ">
-          {title}
-        </h2>
+        <h2 className="text-lg font-semibold ">{title}</h2>
         <div className="flex justify-between mt-1 text-gray-700 font-bold">
           <p>₹{price}</p>
-          <p className="text-red-700">
+          <p
+            className="text-red-600
+            transition-all duration-300 ease-out
+            hover:scale-[1.08]
+            hover:text-red-600
+            hover:drop-shadow-[0_0_6px_rgba(220,38,38,0.9)]"
+          >
             <Link href={`/product?product=${id}`}>Show More →</Link>
           </p>
         </div>

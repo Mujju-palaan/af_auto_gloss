@@ -98,7 +98,7 @@ export const ProductData = [
   {
     id: 6,
     image: "/product/Product_GlassCleaner.jpg",
-    title: "Microfiber Car Cloth",
+    title: "Microfiber Cloth",
     reviews: "5",
     price: "200.00/piece",
     product_description: {
