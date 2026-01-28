@@ -1,8 +1,9 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import Heading_desc from "../Heading_desc";
 
-const Support = () => {
+const AboutUs = () => {
   const team = [
     {
       avatar: "/profile/profile_afrid.jpeg",
@@ -55,9 +56,9 @@ const Support = () => {
   ];
 
   return (
-    <section className="py-14 bg-white/90">
+    <section className="py-8 bg-white/90">
       <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
-        <div className="max-w-xl mx-auto">
+        {/* <div className="max-w-xl mx-auto">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             Meet our team
           </h3>
@@ -68,7 +69,16 @@ const Support = () => {
             a unique skill set, helping us innovate and excel in every project
             we undertake.
           </p>
-        </div>
+        </div> */}
+        <Heading_desc
+        tClass={`text-stone-500`}
+          title={`Meet our team`}
+          description={`At AF Auto Gloss, we believe that our people are our greatest asset.
+            Our team combines expertise, creativity, and dedication to deliver
+            exceptional results for our clients and partners. Each member brings
+            a unique skill set, helping us innovate and excel in every project
+            we undertake.`}
+        />
         <div className="mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
@@ -106,4 +116,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default AboutUs;

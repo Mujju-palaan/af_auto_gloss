@@ -10,8 +10,8 @@ const Navbar = () => {
   const navigation = [
     { title: "Home", path: "/" },
     { title: "Products", path: "/product" },
-    { title: "Contact", path: "/contact" },
-    { title: "Support", path: "/support" },
+    { title: "Service", path: "/services" },
+    { title: "AboutUs", path: "/about" },
     { title: "Faq's", path: "/faqs" },
   ];
 
