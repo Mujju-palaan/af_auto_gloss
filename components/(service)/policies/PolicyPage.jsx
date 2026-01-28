@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage({ PolicyData }) {
   };
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-16">
+    <main className="max-w-7xl mx-auto px-4 py-16 bg-white">
       <div className="grid grid-cols-1 md:grid-cols-[25%_70%] gap-6">
         {/* ================= Sidebar ================= */}
         <aside

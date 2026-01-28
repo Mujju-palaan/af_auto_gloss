@@ -2,7 +2,7 @@ import React from "react";
 
 const PolicyBanner = ({title, date}) => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden bg-white">
       {/* Text Content */}
       <div
         className="
