@@ -42,7 +42,7 @@
     "components/product/Productdetailpage.jsx",
     "components/product/productdetailCard.jsx",
     ".next/dev/types/**/*.ts"
-, "components/product/ProductCard.jsx", "data/ProductData.js", "components/product/product.jsx", "components/roadmap/Roadmap.jsx", "components/(service)/faqs/Faq.jsx", "components/cards/TestimonialCard.jsx", "components/(service)/testimonial/Testimonial.jsx", "app/(service)/faqs/page.jsx"  ],
+, "components/product/ProductCard.jsx", "data/ProductData.js", "components/product/product.jsx", "components/roadmap/Roadmap.jsx", "components/(service)/faqs/Faq.jsx", "components/cards/TestimonialCard.jsx", "components/(service)/testimonial/Testimonial.jsx", "app/(service)/faqs/page.jsx", "app/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
