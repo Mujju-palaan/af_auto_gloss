@@ -9,9 +9,11 @@ const ServiceData = [
         We specialize in the manufacturing of high-quality auto care products
         using carefully selected raw materials and safe, effective formulations.
         <br />
+        <br />
         Our products are designed to deliver reliable cleaning performance,
         superior shine, and long-lasting protection for vehicle paint, glass,
         interiors, rubber, and plastic surfaces.
+        <br />
         <br />
         Manufactured in India and trusted by professionals, our solutions are
         developed to meet the daily demands of automotive care businesses and
@@ -36,8 +38,10 @@ const ServiceData = [
         We provide bulk supply of professional auto care products to dealers,
         workshops, service centres, and automotive businesses.
         <br />
+        <br />
         Our cost-effective formulations with high dilution ratios ensure low
         usage cost while maintaining premium performance and vehicle safety.
+        <br />
         <br />
         With reliable supply, consistent quality, and scalable volumes, we help
         businesses operate efficiently and deliver superior results to their
@@ -62,8 +66,10 @@ const ServiceData = [
         We supply high-performance auto care products to car wash and detailing
         units, designed for regular use and professional detailing services.
         <br />
+        <br />
         Our products deliver effective cleaning, enhanced shine, and surface
         protection while remaining safe for vehicles and operators.
+        <br />
         <br />
         Ideal for daily operations, our solutions help car wash and detailing
         businesses achieve premium results with reduced product consumption and

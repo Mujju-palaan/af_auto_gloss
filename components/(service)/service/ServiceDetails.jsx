@@ -14,10 +14,12 @@ const ServiceDetails = () => {
   // Scroll to selected service
   useEffect(() => {
     if (selectedSlug && refs.current[selectedSlug]) {
-      refs.current[selectedSlug].scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      const y =
+        refs.current[selectedSlug].getBoundingClientRect().top +
+        window.pageYOffset -
+        100; // adjust for header height
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   }, [selectedSlug]);
 
@@ -27,22 +29,25 @@ const ServiceDetails = () => {
         title={`Our Services`}
         description={`We’re a crew of strategists, creators, and marketers helping fearless brands break through the noise and shine with purpose.`}
       />
-      <div className="flex flex-col md:gap-4 ">
+      <div className="flex flex-col md:gap-4 md:px-32 px-2 font-sans">
         {ServiceData.map((e) => (
           <div
             key={e.id}
-            ref={(el) => (refs.current[e.slug] = el)}
-            className="md:px-30 p-6 md:flex xs:flex-col md:gap-18"
+            ref={(el) => {
+              if (el) refs.current[e.slug] = el;
+            }}
+            className="md:px-30 p-6 md:flex xs:flex-col gap-10"
           >
             <div className="flex flex-col gap-3 w-full">
-              <h1 className="md:text-2xl font-semibold">{`${e.id}. ${e.title} :`}</h1>
-              <p className="md:text-[16px] text-xs text-stone-600 ">
+              <h1 className="md:text-4xl font-semibold font-serif text-red-700"
+              >{`${e.id}. ${e.title} :`}</h1>
+              <p className="md:text-[14px] text-xs text-white/90 ">
                 {e.description}
               </p>
 
               {/* If points is an ARRAY */}
               {Array.isArray(e.bestFor) && e.bestFor.length > 0 && (
-                <ul className="list-disc pl-5 space-y-0 text-gray-700 mb-6 md:text-[14px] text-xs">
+                <ul className="list-disc pl-5 space-y-0 text-stone-300 mb-6 md:text-[14px] text-xs">
                   {e.bestFor.map((li, i) => (
                     <li key={i} className="leading-relaxed">
                       {li}
@@ -53,12 +58,13 @@ const ServiceDetails = () => {
             </div>
             <div className="md:w-1/2 rounded-2xl object-cover md:mt-0 mt-2">
               <Image
-                className="object-cover md:h-auto h-50 rounded-2xl"
                 src={e.image}
-                width={250}
-                height={250}
                 alt={e.title}
-              ></Image>
+                width={500}
+                height={400}
+                className="w-full h-auto rounded-2xl object-cover"
+                priority={e.id === 1}
+              />
             </div>
           </div>
         ))}
