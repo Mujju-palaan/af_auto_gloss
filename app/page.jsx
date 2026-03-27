@@ -11,7 +11,7 @@ const Page = () => {
     <div className="text-white/80">
       <Banner />
 
-      <ServiceMenu />
+      <ProductCardsOnly />
 
       <Heading_desc
         title={`Why Professionals Choose AF Autogloss for Regular Car Washing ?`}
@@ -19,11 +19,15 @@ const Page = () => {
       />
       <Home_HeroSection />
 
-      <ProductCardsOnly />
+      <Status />
+
+      <ServiceMenu />
+
+      
+      
       
       <Content />
-
-      <Status />
+      
     </div>
   );
 };

@@ -12,7 +12,7 @@ const ProductCardsOnly = () => {
       </h2> */}
       <Heading_desc title={`Our Products`} description={`High-quality, vehicle-safe auto care products manufactured in India, trusted by professionals for effective cleaning, superior shine, and reliable daily use.`} />
 
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
         {ProductData.map((product) => (
           <ProductCard
             key={product.id}
