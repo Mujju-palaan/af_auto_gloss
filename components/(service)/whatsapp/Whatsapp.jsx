@@ -6,7 +6,7 @@ const Whatsapp = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex justify-end items-end sm:bottom-8 sm:right-8">
       <FloatingWhatsApp
-        phoneNumber="+919966004662"
+        phoneNumber="+917867837866" // ✅ Update with your WhatsApp number
         accountName="AF Auto Gloss"
         avatar="/company/AF.png" // ✅ Ensure this path is correct
         statusMessage="Typically replies within 1hr"
