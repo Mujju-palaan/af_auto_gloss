@@ -50,7 +50,7 @@ const TeamCard = ({
       </div>
 
       {/* Name */}
-      <span className="font-semibold text-xl text-center mt-2">{name}</span>
+      <span className="font-semibold text-stone-800 text-xl text-center mt-2">{name}</span>
 
       {/* Rank */}
       <span className="font-medium text-sm text-red-500">{title}</span>
